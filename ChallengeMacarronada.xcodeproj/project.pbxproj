@@ -10,8 +10,9 @@
 		E94A331A2A1F920F00C39E2F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A33192A1F920F00C39E2F /* Color.swift */; };
 		E94A331C2A1F93A600C39E2F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A331B2A1F93A600C39E2F /* Task.swift */; };
 		E94A33202A1F94A400C39E2F /* Shifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A331F2A1F94A400C39E2F /* Shifts.swift */; };
+		E94A33252A1F996600C39E2F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A33242A1F996600C39E2F /* HomeView.swift */; };
+		E94A33282A1F998E00C39E2F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A33272A1F998E00C39E2F /* HomeViewModel.swift */; };
 		E9B066E92A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */; };
-		E9B066EB2A1D08F200BDDA48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B066EA2A1D08F200BDDA48 /* ContentView.swift */; };
 		E9B066ED2A1D08F300BDDA48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B066EC2A1D08F300BDDA48 /* Assets.xcassets */; };
 		E9B066F02A1D08F300BDDA48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B066EF2A1D08F300BDDA48 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -20,9 +21,10 @@
 		E94A33192A1F920F00C39E2F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E94A331B2A1F93A600C39E2F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		E94A331F2A1F94A400C39E2F /* Shifts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shifts.swift; sourceTree = "<group>"; };
+		E94A33242A1F996600C39E2F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E94A33272A1F998E00C39E2F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E9B066E52A1D08F200BDDA48 /* ChallengeMacarronada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeMacarronada.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMacarronadaApp.swift; sourceTree = "<group>"; };
-		E9B066EA2A1D08F200BDDA48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9B066EC2A1D08F300BDDA48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9B066EF2A1D08F300BDDA48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9B066F12A1D08F300BDDA48 /* ChallengeMacarronada.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChallengeMacarronada.entitlements; sourceTree = "<group>"; };
@@ -47,6 +49,31 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		E94A33212A1F993300C39E2F /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				E94A33222A1F994400C39E2F /* Views */,
+				E94A33232A1F994A00C39E2F /* ViewModel */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		E94A33222A1F994400C39E2F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E94A33242A1F996600C39E2F /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E94A33232A1F994A00C39E2F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E94A33272A1F998E00C39E2F /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		E9B066DC2A1D08F200BDDA48 = {
 			isa = PBXGroup;
 			children = (
@@ -66,7 +93,6 @@
 		E9B066E72A1D08F200BDDA48 /* ChallengeMacarronada */ = {
 			isa = PBXGroup;
 			children = (
-				E9B066EA2A1D08F200BDDA48 /* ContentView.swift */,
 				E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */,
 				E9B066F82A1D094E00BDDA48 /* Model */,
 				E9B066FB2A1D096E00BDDA48 /* Components */,
@@ -92,6 +118,7 @@
 		E9B066F72A1D092600BDDA48 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E94A33212A1F993300C39E2F /* HomeView */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -205,8 +232,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E94A331C2A1F93A600C39E2F /* Task.swift in Sources */,
-				E9B066EB2A1D08F200BDDA48 /* ContentView.swift in Sources */,
+				E94A33282A1F998E00C39E2F /* HomeViewModel.swift in Sources */,
 				E9B066E92A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift in Sources */,
+				E94A33252A1F996600C39E2F /* HomeView.swift in Sources */,
 				E94A33202A1F94A400C39E2F /* Shifts.swift in Sources */,
 				E94A331A2A1F920F00C39E2F /* Color.swift in Sources */,
 			);
