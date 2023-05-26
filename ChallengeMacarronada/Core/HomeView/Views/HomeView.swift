@@ -11,6 +11,7 @@ struct HomeView: View {
     @State var selectedDate : Date = Date()
     @State var isPresented : Bool = false
     @State var selectedShift: Shifts = .morning
+    @State var selectedIndex : Int = 0
     
     
     let dateFormatter: DateFormatter = {
@@ -41,14 +42,8 @@ struct HomeView: View {
                         .fixedSize()
                     }
                 }
-                
-                Picker("Shift Picker", selection: $selectedShift){
-                    ForEach(Shifts.allCases){ shift in
-                        Text(shift.rawValue)
-                    }
-                }
-                .pickerStyle(.segmented)
-                    .labelsHidden()
+
+                CustomSegmentedControl(preselectedIndex: $selectedIndex, options: Shifts.allCases)
                 
                 Spacer()
             }
@@ -56,6 +51,7 @@ struct HomeView: View {
         .frame(width: 390, height: 624)
     }
 }
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

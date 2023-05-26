@@ -16,4 +16,14 @@ enum Shifts : String, CaseIterable, Identifiable {
     
     var id: Self {self}
     
+    var color: Color {
+        get {
+            switch self {
+            case .morning: return Color.theme.morning
+            case .evening: return Color.theme.evening
+            case .night: return Color.theme.night
+            }
+        }
+    }
+    
 }
