@@ -29,7 +29,9 @@ struct HomeView: View {
                 pickerSection
                 textfieldSection
                 HStack {
-                    
+                    ShiftLine(shift: .evening)
+                    Spacer()
+                        
                 }
                 
                 Spacer()
@@ -127,6 +129,7 @@ extension HomeView {
                 
             )
     }
+
     
     
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E9319A9D2A20E7DD00DC635E /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9319A9C2A20E7DD00DC635E /* Placeholder.swift */; };
+		E9319A9F2A20EAA200DC635E /* ShiftLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9319A9E2A20EAA200DC635E /* ShiftLine.swift */; };
 		E94A331A2A1F920F00C39E2F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A33192A1F920F00C39E2F /* Color.swift */; };
 		E94A331C2A1F93A600C39E2F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A331B2A1F93A600C39E2F /* Task.swift */; };
 		E94A33202A1F94A400C39E2F /* Shifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A331F2A1F94A400C39E2F /* Shifts.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		E9319A9C2A20E7DD00DC635E /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
+		E9319A9E2A20EAA200DC635E /* ShiftLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftLine.swift; sourceTree = "<group>"; };
 		E94A33192A1F920F00C39E2F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E94A331B2A1F93A600C39E2F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		E94A331F2A1F94A400C39E2F /* Shifts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shifts.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				E94A33242A1F996600C39E2F /* HomeView.swift */,
+				E9319A9E2A20EAA200DC635E /* ShiftLine.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9319A9F2A20EAA200DC635E /* ShiftLine.swift in Sources */,
 				E94A331C2A1F93A600C39E2F /* Task.swift in Sources */,
 				E94A33282A1F998E00C39E2F /* HomeViewModel.swift in Sources */,
 				E9B066E92A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift in Sources */,
