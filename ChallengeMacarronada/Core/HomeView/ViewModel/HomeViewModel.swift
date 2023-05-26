@@ -17,7 +17,7 @@ final class HomeViewModel: ObservableObject {
         Task(text: "Night Task", shift: .night, isCompleted: false)
     ]
     
-    
+    let concludedTask: Task = Task(text: "Eu sou uma task conlcuida", shift: .evening, isCompleted: true)
     
 }
 
