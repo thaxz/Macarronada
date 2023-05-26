@@ -17,8 +17,6 @@ final class HomeViewModel: ObservableObject {
         Task(text: "Night Task", shift: .night, isCompleted: false)
     ]
     
-    
-    
 }
 
 
