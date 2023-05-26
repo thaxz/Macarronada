@@ -8,8 +8,12 @@
 import Foundation
 import SwiftUI
 
-enum Shifts{
+enum Shifts : String, CaseIterable, Identifiable {
+
+    case morning = "Manhã"
+    case evening = "Tarde"
+    case night = "Noite"
     
-    case morning, evening, night
+    var id: Self {self}
     
 }
