@@ -117,13 +117,16 @@ extension HomeView {
     }
     
     private var listSection: some View {
-        List {
-            ForEach(viewModel.tasks) { task in
-                ListRow(task: task)
+            List {
+                ForEach(viewModel.tasks) { task in
+                    ListRow(task: task)
+                }
+                .onMove { indices, destination in
+                    viewModel.tasks.move(fromOffsets: indices, toOffset: destination)
+                }
             }
+            .scrollContentBackground(.hidden)
+            .listStyle(PlainListStyle())
         }
-        .scrollContentBackground(.hidden)
-        .listStyle(PlainListStyle())
-    }
     
 }

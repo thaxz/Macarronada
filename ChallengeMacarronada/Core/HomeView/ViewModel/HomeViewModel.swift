@@ -18,13 +18,25 @@ final class HomeViewModel: ObservableObject {
     }
     
     var tasks: [Task] {
-        switch selectedShift {
-        case .morning:
-            return morningTasks
-        case .evening:
-            return eveningTasks
-        case .night:
-            return nightTasks
+        get {
+            switch selectedShift {
+            case .morning:
+                return morningTasks
+            case .evening:
+                return eveningTasks
+            case .night:
+                return nightTasks
+            }
+        }
+        set {
+            switch selectedShift {
+            case .morning:
+                morningTasks = newValue
+            case .evening:
+                eveningTasks = newValue
+            case .night:
+                nightTasks = newValue
+            }
         }
     }
     
