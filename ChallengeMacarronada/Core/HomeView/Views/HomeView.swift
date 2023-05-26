@@ -34,9 +34,13 @@ struct HomeView: View {
                     ShiftLine(shift: .evening)
                     Spacer()
                     List {
-                        ListRow(task: concludedTask)
-                            
+                        ForEach(1..<5) { int in
+                            ListRow(task: concludedTask)
+                        }
+                        
                     }
+                    .scrollContentBackground(.hidden)
+                    .listStyle(PlainListStyle())
                 }                
                 Spacer()
             }
@@ -92,17 +96,9 @@ extension HomeView {
     }
     
     private var pickerSection: some View {
-        Picker("Shift Picker", selection: $selectedShift){
-            ForEach(Shifts.allCases){ shift in
-                Text(shift.rawValue)
-            }
-        }
-        .frame(maxWidth: .infinity)
-        .frame(height: 32)
-        .pickerStyle(.segmented)
-        .labelsHidden()
+        CustomSegmentedControl(preselectedIndex: $selectedIndex, options: Shifts.allCases)
     }
-    
+        
     private var textfieldSection: some View {
         TextField("", text: $text)
             .placeholder(when: text.isEmpty) {
