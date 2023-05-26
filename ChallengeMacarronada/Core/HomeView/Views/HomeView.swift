@@ -9,13 +9,23 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @StateObject private var viewModel: HomeViewModel
+    
+    init(){
+        _viewModel = StateObject(wrappedValue: HomeViewModel())
+    }
+    
+    @State private var tasks: [Task] = []
+    
     @State var selectedDate : Date = Date()
     @State var isPresented : Bool = false
-    @State var selectedShift: Shifts = .morning
+   // @State var selectedShift: Shifts = .morning
     @State var selectedIndex : Int = 0
     @State var text = ""
     
-    let concludedTask: Task = Task(text: "Eu sou uma task conlcuida", shift: .evening, isCompleted: true)
+    var selectedShift: Shifts {
+        Shifts.allCases[selectedIndex]
+    }
     
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -34,8 +44,8 @@ struct HomeView: View {
                     ShiftLine(shift: .evening)
                     Spacer()
                     List {
-                        ForEach(1..<5) { int in
-                            ListRow(task: concludedTask)
+                        ForEach(self.tasks) { task in
+                            ListRow(task: task)
                         }
                         
                     }
@@ -46,6 +56,15 @@ struct HomeView: View {
             }
             .padding(.horizontal, 24)
         }
+        .onChange(of: selectedIndex, perform: { newValue in
+            if selectedIndex == 0 {
+                self.tasks = viewModel.morningTasks
+            } else if selectedIndex == 1 {
+                self.tasks = viewModel.eveningTasks
+            } else {
+                self.tasks = viewModel.nightTasks
+            }
+        })
         .frame(width: 390, height: 624)
     }
 }
