@@ -14,6 +14,7 @@ struct HomeView: View {
     @State var selectedShift: Shifts = .morning
     @State var text = ""
     
+    let concludedTask: Task = Task(text: "Eu sou uma task conlcuida", shift: .evening, isCompleted: true)
     
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -31,7 +32,10 @@ struct HomeView: View {
                 HStack {
                     ShiftLine(shift: .evening)
                     Spacer()
-                        
+                    List {
+                        ListRow(task: concludedTask)
+                            
+                    }
                 }
                 
                 Spacer()
