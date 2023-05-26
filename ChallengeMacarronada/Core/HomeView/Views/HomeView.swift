@@ -12,6 +12,7 @@ struct HomeView: View {
     @State var selectedDate : Date = Date()
     @State var isPresented : Bool = false
     @State var selectedShift: Shifts = .morning
+    @State var selectedIndex : Int = 0
     @State var text = ""
     
     let concludedTask: Task = Task(text: "Eu sou uma task conlcuida", shift: .evening, isCompleted: true)
@@ -36,8 +37,7 @@ struct HomeView: View {
                         ListRow(task: concludedTask)
                             
                     }
-                }
-                
+                }                
                 Spacer()
             }
             .padding(.horizontal, 24)
@@ -45,6 +45,7 @@ struct HomeView: View {
         .frame(width: 390, height: 624)
     }
 }
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
