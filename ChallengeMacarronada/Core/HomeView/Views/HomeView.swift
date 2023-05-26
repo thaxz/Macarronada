@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject private var viewModel: HomeViewModel
+    @State var text = ""
     
     init(){
         _viewModel = StateObject(wrappedValue: HomeViewModel())
@@ -25,13 +26,7 @@ struct HomeView: View {
                 HStack {
                     ShiftLine(shift: viewModel.selectedShift)
                     Spacer()
-                    List {
-                        ForEach(viewModel.tasks) { task in
-                            ListRow(task: task)
-                        }
-                    }
-                    .scrollContentBackground(.hidden)
-                    .listStyle(PlainListStyle())
+                    listSection
                 }
                 Spacer()
             }
@@ -90,8 +85,8 @@ extension HomeView {
     }
     
     private var textfieldSection: some View {
-        TextField("", text: $viewModel.text)
-            .placeholder(when: viewModel.text.isEmpty) {
+        TextField("", text: $text)
+            .placeholder(when: text.isEmpty) {
                 Text("Adicionar nova atividade")
                     .italic()
                     .font(.system(size: 12, weight: .light))
@@ -113,11 +108,22 @@ extension HomeView {
                             .padding(.trailing, 8)
                             .foregroundColor(Color.theme.text)
                             .onTapGesture {
-                                // create new task
+                                viewModel.createNewTask(withText: text)
+                                text = ""
                             }
                     }
                 }
             )
+    }
+    
+    private var listSection: some View {
+        List {
+            ForEach(viewModel.tasks) { task in
+                ListRow(task: task)
+            }
+        }
+        .scrollContentBackground(.hidden)
+        .listStyle(PlainListStyle())
     }
     
 }

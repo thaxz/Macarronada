@@ -30,7 +30,6 @@ final class HomeViewModel: ObservableObject {
     
     @Published var selectedDate: Date = Date()
     @Published var isPresented: Bool = false
-    @Published var text = ""
     
     private var morningTasks: [Task] = [
         Task(text: "Morning Task", shift: .morning, isCompleted: false),
@@ -52,6 +51,18 @@ final class HomeViewModel: ObservableObject {
         formatter.dateStyle = .long
         return formatter
     }()
+    
+    func createNewTask(withText text: String) {
+            let newTask = Task(text: text, shift: selectedShift, isCompleted: false)
+            switch selectedShift {
+            case .morning:
+                morningTasks.append(newTask)
+            case .evening:
+                eveningTasks.append(newTask)
+            case .night:
+                nightTasks.append(newTask)
+            }
+        }
     
     
 }
