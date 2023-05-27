@@ -67,7 +67,8 @@ extension HomeView {
                            displayedComponents: [.date])
                 .datePickerStyle(.graphical)
                 .labelsHidden()
-                .frame(width: 200 ,height: 200)
+                .fixedSize()
+                .padding()
             }
             
             Spacer()
