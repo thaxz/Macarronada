@@ -131,6 +131,7 @@ extension HomeView {
                 }
                 .onMove { indices, destination in
                     viewModel.tasks.move(fromOffsets: indices, toOffset: destination)
+                    
                 }
             }
             .scrollContentBackground(.hidden)
