@@ -82,7 +82,7 @@ extension HomeView {
     }
     
     private var pickerSection: some View {
-        CustomSegmentedControl(preselectedIndex: $viewModel.selectedIndex, options: Shifts.allCases)
+        CustomSegmentedControl(selectedOption: $viewModel.selectedShift)
     }
     
     private var textfieldSection: some View {

@@ -11,11 +11,7 @@ import SwiftUI
 @MainActor
 final class HomeViewModel: ObservableObject {
     
-    @Published var selectedIndex: Int = 0
-    
-    var selectedShift: Shifts {
-        Shifts.allCases[selectedIndex]
-    }
+    @Published var selectedShift: Shifts = .morning
     
     var tasks: [Task] {
         get {
@@ -66,6 +62,7 @@ final class HomeViewModel: ObservableObject {
     
     func createNewTask(withText text: String) {
             let newTask = Task(text: text, shift: selectedShift, isCompleted: false)
+        
             switch selectedShift {
             case .morning:
                 morningTasks.append(newTask)
