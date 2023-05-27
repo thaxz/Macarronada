@@ -67,7 +67,8 @@ extension HomeView {
                            displayedComponents: [.date])
                 .datePickerStyle(.graphical)
                 .labelsHidden()
-                .frame(width: 200 ,height: 200)
+                .fixedSize()
+                .padding()
             }
             
             Spacer()
@@ -81,7 +82,7 @@ extension HomeView {
     }
     
     private var pickerSection: some View {
-        CustomSegmentedControl(preselectedIndex: $viewModel.selectedIndex, options: Shifts.allCases)
+        CustomSegmentedControl(selectedOption: $viewModel.selectedShift)
     }
     
     private var textfieldSection: some View {
@@ -98,6 +99,13 @@ extension HomeView {
             .foregroundColor(Color.theme.text)
             .padding([.horizontal], 8)
             .cornerRadius(8)
+            .onSubmit {
+                viewModel.createNewTask(withText: text)
+                text = ""
+            }
+            .onExitCommand(perform: {
+                text = ""
+            })
             .overlay(
                 ZStack {
                     RoundedRectangle(cornerRadius: 8)
@@ -123,6 +131,7 @@ extension HomeView {
                 }
                 .onMove { indices, destination in
                     viewModel.tasks.move(fromOffsets: indices, toOffset: destination)
+                    
                 }
             }
             .scrollContentBackground(.hidden)
