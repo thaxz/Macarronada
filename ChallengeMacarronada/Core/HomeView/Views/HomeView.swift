@@ -99,6 +99,13 @@ extension HomeView {
             .foregroundColor(Color.theme.text)
             .padding([.horizontal], 8)
             .cornerRadius(8)
+            .onSubmit {
+                viewModel.createNewTask(withText: text)
+                text = ""
+            }
+            .onExitCommand(perform: {
+                text = ""
+            })
             .overlay(
                 ZStack {
                     RoundedRectangle(cornerRadius: 8)
