@@ -11,11 +11,7 @@ import SwiftUI
 @MainActor
 final class HomeViewModel: ObservableObject {
     
-    @Published var selectedIndex: Int = 0
-    
-    var selectedShift: Shifts {
-        Shifts.allCases[selectedIndex]
-    }
+    @Published var selectedShift: Shifts = .morning
     
     var tasks: [Task] {
         get {
@@ -43,17 +39,17 @@ final class HomeViewModel: ObservableObject {
     @Published var selectedDate: Date = Date()
     @Published var isPresented: Bool = false
     
-    private var morningTasks: [Task] = [
+    @Published private var morningTasks: [Task] = [
         Task(text: "Morning Task", shift: .morning, isCompleted: false),
         Task(text: "Morning Task", shift: .morning, isCompleted: false),
     ]
     
-    private var eveningTasks: [Task] = [
+    @Published  private var eveningTasks: [Task] = [
         Task(text: "Evening Task", shift: .evening, isCompleted: false),
         Task(text: "Evening Task", shift: .evening, isCompleted: false),
     ]
     
-    private var nightTasks: [Task] = [
+    @Published private var nightTasks: [Task] = [
         Task(text: "Night Task", shift: .night, isCompleted: false),
         Task(text: "Night Task", shift: .night, isCompleted: false),
     ]
@@ -66,6 +62,7 @@ final class HomeViewModel: ObservableObject {
     
     func createNewTask(withText text: String) {
             let newTask = Task(text: text, shift: selectedShift, isCompleted: false)
+        
             switch selectedShift {
             case .morning:
                 morningTasks.append(newTask)
