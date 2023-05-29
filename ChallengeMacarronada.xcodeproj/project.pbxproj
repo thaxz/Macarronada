@@ -17,6 +17,8 @@
 		E94A33202A1F94A400C39E2F /* Shifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A331F2A1F94A400C39E2F /* Shifts.swift */; };
 		E94A33252A1F996600C39E2F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A33242A1F996600C39E2F /* HomeView.swift */; };
 		E94A33282A1F998E00C39E2F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A33272A1F998E00C39E2F /* HomeViewModel.swift */; };
+		E94E5D762A24CC6100EB20ED /* RemainingTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E5D752A24CC6100EB20ED /* RemainingTasks.swift */; };
+		E94E5D782A24D0C100EB20ED /* FreeTimeModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E5D772A24D0C100EB20ED /* FreeTimeModal.swift */; };
 		E9B066E92A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */; };
 		E9B066ED2A1D08F300BDDA48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B066EC2A1D08F300BDDA48 /* Assets.xcassets */; };
 		E9B066F02A1D08F300BDDA48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B066EF2A1D08F300BDDA48 /* Preview Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		E94A331F2A1F94A400C39E2F /* Shifts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shifts.swift; sourceTree = "<group>"; };
 		E94A33242A1F996600C39E2F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E94A33272A1F998E00C39E2F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E94E5D752A24CC6100EB20ED /* RemainingTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingTasks.swift; sourceTree = "<group>"; };
+		E94E5D772A24D0C100EB20ED /* FreeTimeModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeModal.swift; sourceTree = "<group>"; };
 		E9B066E52A1D08F200BDDA48 /* ChallengeMacarronada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeMacarronada.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMacarronadaApp.swift; sourceTree = "<group>"; };
 		E9B066EC2A1D08F300BDDA48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +98,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		E94E5D742A24CBEB00EB20ED /* PopUps */ = {
+			isa = PBXGroup;
+			children = (
+				E94E5D752A24CC6100EB20ED /* RemainingTasks.swift */,
+				E94E5D772A24D0C100EB20ED /* FreeTimeModal.swift */,
+			);
+			path = PopUps;
+			sourceTree = "<group>";
+		};
 		E9B066DC2A1D08F200BDDA48 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +151,7 @@
 		E9B066F72A1D092600BDDA48 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E94E5D742A24CBEB00EB20ED /* PopUps */,
 				E94A33212A1F993300C39E2F /* HomeView */,
 			);
 			path = Core;
@@ -254,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E94E5D782A24D0C100EB20ED /* FreeTimeModal.swift in Sources */,
 				8AF8A9222A20F1B40024C505 /* CustomSegmentedControl.swift in Sources */,
 				E9319A9F2A20EAA200DC635E /* ShiftLine.swift in Sources */,
 				E94A331C2A1F93A600C39E2F /* Task.swift in Sources */,
@@ -261,6 +276,7 @@
 				E9B066E92A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift in Sources */,
 				E94A33252A1F996600C39E2F /* HomeView.swift in Sources */,
 				E94A33202A1F94A400C39E2F /* Shifts.swift in Sources */,
+				E94E5D762A24CC6100EB20ED /* RemainingTasks.swift in Sources */,
 				E94A331A2A1F920F00C39E2F /* Color.swift in Sources */,
 				E9319A9D2A20E7DD00DC635E /* Placeholder.swift in Sources */,
 				E9319AA12A20ED9300DC635E /* ListRow.swift in Sources */,
