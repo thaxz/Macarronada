@@ -12,6 +12,7 @@ struct ChallengeMacarronadaApp: App {
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .frame(width: 390, height: 624)
         }
     }
 }

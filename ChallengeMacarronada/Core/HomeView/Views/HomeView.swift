@@ -32,7 +32,6 @@ struct HomeView: View {
             }
             .padding(.horizontal, 24)
         }
-        .frame(width: 390, height: 624)
     }
 }
 
@@ -105,6 +104,7 @@ extension HomeView {
                     HStack {
                         Spacer()
                         Image(systemName: "plus")
+                            .help("Click to create a new task")
                             .padding(.trailing, 8)
                             .foregroundColor(Color.theme.text)
                             .onTapGesture {
