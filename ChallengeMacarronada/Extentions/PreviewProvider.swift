@@ -19,8 +19,8 @@ class DeveloperPreview {
     private init() {}
  
     
-    let concludedTask: Task = Task(text: "Eu sou uma task conlcuida", shift: .evening, isCompleted: true)
+    let concludedTask: Assignment = Assignment(text: "Eu sou uma task conlcuida", shift: .evening, isCompleted: true)
     
-    let toDoTask: Task = Task(text: "Eu sou uma task a se fazer", shift: .evening, isCompleted: false)
+    let toDoTask: Assignment = Assignment(text: "Eu sou uma task a se fazer", shift: .evening, isCompleted: false)
     
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Task: Identifiable {
+struct Assignment: Identifiable {
     
     let id = UUID().uuidString
     let text: String

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ListRow: View {
-    @State var task: Task
+    @State var task: Assignment
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 10)

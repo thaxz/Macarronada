@@ -13,7 +13,7 @@ final class HomeViewModel: ObservableObject {
     
     @Published var selectedShift: Shifts = .morning
     
-    var tasks: [Task] {
+    var tasks: [Assignment] {
         get {
             switch selectedShift {
             case .morning:
@@ -39,19 +39,19 @@ final class HomeViewModel: ObservableObject {
     @Published var selectedDate: Date = Date()
     @Published var isPresented: Bool = false
     
-    @Published private var morningTasks: [Task] = [
-        Task(text: "Morning Task", shift: .morning, isCompleted: false),
-        Task(text: "Morning Task", shift: .morning, isCompleted: false),
+    @Published private var morningTasks: [Assignment] = [
+        Assignment(text: "Morning Task", shift: .morning, isCompleted: false),
+        Assignment(text: "Morning Task", shift: .morning, isCompleted: false),
     ]
     
-    @Published  private var eveningTasks: [Task] = [
-        Task(text: "Evening Task", shift: .evening, isCompleted: false),
-        Task(text: "Evening Task", shift: .evening, isCompleted: false),
+    @Published  private var eveningTasks: [Assignment] = [
+        Assignment(text: "Evening Task", shift: .evening, isCompleted: false),
+        Assignment(text: "Evening Task", shift: .evening, isCompleted: false),
     ]
     
-    @Published private var nightTasks: [Task] = [
-        Task(text: "Night Task", shift: .night, isCompleted: false),
-        Task(text: "Night Task", shift: .night, isCompleted: false),
+    @Published private var nightTasks: [Assignment] = [
+        Assignment(text: "Night Task", shift: .night, isCompleted: false),
+        Assignment(text: "Night Task", shift: .night, isCompleted: false),
     ]
     
     let dateFormatter: DateFormatter = {
@@ -61,7 +61,7 @@ final class HomeViewModel: ObservableObject {
     }()
     
     func createNewTask(withText text: String) {
-            let newTask = Task(text: text, shift: selectedShift, isCompleted: false)
+            let newTask = Assignment(text: text, shift: selectedShift, isCompleted: false)
         
             switch selectedShift {
             case .morning:
