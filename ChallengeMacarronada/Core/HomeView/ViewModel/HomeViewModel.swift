@@ -12,7 +12,7 @@ import SwiftUI
 final class HomeViewModel: ObservableObject {
     
     @Published var selectedShift: Shifts = .morning
-    
+        
     var tasks: [Assignment] {
         get {
             switch selectedShift {

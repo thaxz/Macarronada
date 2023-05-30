@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    @StateObject private var viewModel: HomeViewModel
+//    @StateObject private var viewModel: HomeViewModel
     @State var text = ""
     
-    init(){
-        _viewModel = StateObject(wrappedValue: HomeViewModel())
-    }
+//    init(){
+//        _viewModel = StateObject(wrappedValue: HomeViewModel())
+//    }
+    
+    @StateObject var viewModel : PersistentStore = PersistentStore()
     
     var body: some View {
         ZStack {
@@ -127,11 +128,13 @@ extension HomeView {
     private var listSection: some View {
             List {
                 ForEach(viewModel.tasks) { task in
-                    ListRow(task: task)
+                    if task.shift == viewModel.selectedShift{
+                        ListRow(task: task)
+                    }
                 }
+                .onDelete(perform: viewModel.deleteAssignment)
                 .onMove { indices, destination in
                     viewModel.tasks.move(fromOffsets: indices, toOffset: destination)
-                    
                 }
             }
             .scrollContentBackground(.hidden)
