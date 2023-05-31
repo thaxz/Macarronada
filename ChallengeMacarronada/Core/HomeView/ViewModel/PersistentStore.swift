@@ -11,7 +11,7 @@ import Foundation
 class PersistentStore : ObservableObject {
 
     let container: NSPersistentContainer
-    var displayedAssignments : [AssignmentEntity] = []
+    @Published var displayedAssignments : [AssignmentEntity] = []
     @Published var selectedShift : Shifts = .morning
     @Published var tasks: [Assignment] = []
     @Published var selectedDate: Date = Date()
@@ -36,13 +36,11 @@ class PersistentStore : ObservableObject {
     func fetchAssignment(){
         let request = NSFetchRequest<AssignmentEntity>(entityName: "AssignmentEntity")
         //    https://nspredicate.xyz/
-//        request.predicate = NSPredicate(format: "isCompleted == NO")
-//        request.predicate = NSPredicate(format: "shift == %@", self.selectedShift.rawValue)
-//        request.predicate = NSPredicate(format: "taskDate == %@", self.selectedDate)
+        request.predicate = NSPredicate(format: "taskDate == %@", self.selectedDate.stripTime() as CVarArg)
         
         do {
             displayedAssignments = try container.viewContext.fetch(request)
-            tasks = displayedAssignments.map { Assignment(id: $0.id!, text: $0.text!, shift: Shifts(rawValue: $0.shift!)!, isCompleted: $0.isCompleted) }
+            tasks = displayedAssignments.map { Assignment(id: $0.id!, text: $0.text!, shift: Shifts(rawValue: $0.shift!)!, isCompleted: $0.isCompleted, taskDate: $0.taskDate!) }
         } catch let error {
             print(error)
         }
@@ -56,7 +54,7 @@ class PersistentStore : ObservableObject {
         newAssignment.text = text
         newAssignment.shift = self.selectedShift.rawValue
         newAssignment.isCompleted = false
-        newAssignment.taskDate = selectedDate
+        newAssignment.taskDate = selectedDate.stripTime()
         
         saveData()
     }

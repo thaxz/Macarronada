@@ -10,9 +10,10 @@ import Foundation
 struct Assignment: Identifiable {
     
     let id : String
-    let text: String
-    let shift: Shifts
+    var text: String
+    var shift: Shifts
     var isCompleted: Bool
+    var taskDate: Date
     
     mutating func toggleTask(){
         isCompleted.toggle()
