@@ -32,6 +32,9 @@ struct HomeView: View {
                 Spacer()
             }
             .padding(.horizontal, 24)
+            .onChange(of: viewModel.selectedDate) { newValue in
+                viewModel.saveData()
+            }
         }
     }
 }
