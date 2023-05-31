@@ -11,7 +11,7 @@ import Foundation
 class PersistentStore : ObservableObject {
 
     let container: NSPersistentContainer
-    @Published var displayedAssignments : [AssignmentEntity] = []
+    var displayedAssignments : [AssignmentEntity] = []
     @Published var selectedShift : Shifts = .morning
     @Published var tasks: [Assignment] = []
     @Published var selectedDate: Date = Date()
@@ -42,7 +42,7 @@ class PersistentStore : ObservableObject {
         
         do {
             displayedAssignments = try container.viewContext.fetch(request)
-            tasks = displayedAssignments.map { Assignment(text: $0.text!, shift: Shifts(rawValue: $0.shift!)!, isCompleted: $0.isCompleted) }
+            tasks = displayedAssignments.map { Assignment(id: $0.id!, text: $0.text!, shift: Shifts(rawValue: $0.shift!)!, isCompleted: $0.isCompleted) }
         } catch let error {
             print(error)
         }
@@ -74,7 +74,20 @@ class PersistentStore : ObservableObject {
         guard let index = indexSet.first else {return}
         let entity = displayedAssignments[index]
         container.viewContext.delete(entity)
+
         saveData()
+    }
+    
+    func deleteAssignmentFromContextMenu(id: String){
+        for entity in displayedAssignments{
+            print(entity.id, id)
+            
+            if entity.id == id{
+                container.viewContext.delete(entity)
+                saveData()
+            }
+        }
+        
     }
     
     func taskToggle(id : String){

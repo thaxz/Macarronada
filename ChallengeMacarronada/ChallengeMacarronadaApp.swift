@@ -21,14 +21,14 @@ struct ChallengeMacarronadaApp: App {
     
         private var statusItem: NSStatusItem!
         private var popover: NSPopover!
-        private var vm: HomeViewModel!
+//        private var vm: HomeViewModel!
     
     
         @MainActor
         func applicationDidFinishLaunching(_ notification: Notification) {
     
             statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-            self.vm = HomeViewModel()
+//            self.vm = HomeViewModel()
     
             if let statusButton = statusItem.button {
                 statusButton.image = NSImage(systemSymbolName: "bell.fill", accessibilityDescription: "Heart")

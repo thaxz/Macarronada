@@ -59,8 +59,8 @@ struct ListRow: View {
     
 }
 
-struct ListRow_Previews: PreviewProvider {
-    static var previews: some View {
-        ListRow(task: dev.toDoTask)
-    }
-}
+//struct ListRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ListRow(task: dev.toDoTask)
+//    }
+//}

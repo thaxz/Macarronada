@@ -9,7 +9,7 @@ import Foundation
 
 struct Assignment: Identifiable {
     
-    let id = UUID().uuidString
+    let id : String
     let text: String
     let shift: Shifts
     var isCompleted: Bool
