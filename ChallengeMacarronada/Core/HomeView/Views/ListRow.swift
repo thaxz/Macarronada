@@ -14,7 +14,7 @@ struct ListRow: View {
             RoundedRectangle(cornerRadius: 10)
                 .fill(
                     task.isCompleted ? task.shift.color :
-                        Color.clear
+                        Color.theme.background
                 )
             
             HStack(spacing: 14){
@@ -25,9 +25,6 @@ struct ListRow: View {
                 .resizable()
                 .frame(width: 14, height: 14)
                 .foregroundColor(Color.theme.text)
-                .onTapGesture {
-                    task.toggleTask()
-                }
                 isStrikedThrough(task.isCompleted)
                     .foregroundColor(Color.theme.text)
                     .font(.system(size: 12, weight: .regular))
@@ -39,6 +36,9 @@ struct ListRow: View {
                     .foregroundColor(Color.theme.text)
             }
             .padding(.horizontal, 12)
+        }
+        .onTapGesture {
+            task.toggleTask()
         }
         .frame(minHeight: 56)
         .frame(maxWidth: .infinity)
