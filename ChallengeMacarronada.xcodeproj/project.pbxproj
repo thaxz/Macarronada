@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A0ECC852A278732005B5B80 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0ECC842A278732005B5B80 /* Date.swift */; };
+		8ACE96132A2643C70050C54D /* Macarronada.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8ACE96112A2643C70050C54D /* Macarronada.xcdatamodeld */; };
+		8ACE96152A2644610050C54D /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACE96142A2644610050C54D /* PersistentStore.swift */; };
 		8AF8A9222A20F1B40024C505 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF8A9212A20F1B40024C505 /* CustomSegmentedControl.swift */; };
 		E9319A9D2A20E7DD00DC635E /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9319A9C2A20E7DD00DC635E /* Placeholder.swift */; };
 		E9319A9F2A20EAA200DC635E /* ShiftLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9319A9E2A20EAA200DC635E /* ShiftLine.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A0ECC842A278732005B5B80 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		8ACE96122A2643C70050C54D /* Macarronada.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Macarronada.xcdatamodel; sourceTree = "<group>"; };
+		8ACE96142A2644610050C54D /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
 		8AF8A9212A20F1B40024C505 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = SOURCE_ROOT; };
 		E9319A9C2A20E7DD00DC635E /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
 		E9319A9E2A20EAA200DC635E /* ShiftLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftLine.swift; sourceTree = "<group>"; };
@@ -93,6 +99,7 @@
 		E94A33232A1F994A00C39E2F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8ACE96142A2644610050C54D /* PersistentStore.swift */,
 				E94A33272A1F998E00C39E2F /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
@@ -110,6 +117,7 @@
 		E9B066DC2A1D08F200BDDA48 = {
 			isa = PBXGroup;
 			children = (
+				8ACE96112A2643C70050C54D /* Macarronada.xcdatamodeld */,
 				E9B066E72A1D08F200BDDA48 /* ChallengeMacarronada */,
 				E9B066E62A1D08F200BDDA48 /* Products */,
 			);
@@ -179,6 +187,7 @@
 			children = (
 				E94A33192A1F920F00C39E2F /* Color.swift */,
 				E9319AA22A20F0B700DC635E /* PreviewProvider.swift */,
+				8A0ECC842A278732005B5B80 /* Date.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -271,6 +280,7 @@
 				E94E5D782A24D0C100EB20ED /* FreeTimeModal.swift in Sources */,
 				8AF8A9222A20F1B40024C505 /* CustomSegmentedControl.swift in Sources */,
 				E9319A9F2A20EAA200DC635E /* ShiftLine.swift in Sources */,
+				8A0ECC852A278732005B5B80 /* Date.swift in Sources */,
 				E94A331C2A1F93A600C39E2F /* Assignment.swift in Sources */,
 				E94A33282A1F998E00C39E2F /* HomeViewModel.swift in Sources */,
 				E9B066E92A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift in Sources */,
@@ -279,8 +289,10 @@
 				E94E5D762A24CC6100EB20ED /* RemainingTasks.swift in Sources */,
 				E94A331A2A1F920F00C39E2F /* Color.swift in Sources */,
 				E9319A9D2A20E7DD00DC635E /* Placeholder.swift in Sources */,
+				8ACE96152A2644610050C54D /* PersistentStore.swift in Sources */,
 				E9319AA12A20ED9300DC635E /* ListRow.swift in Sources */,
 				E9319AA32A20F0B700DC635E /* PreviewProvider.swift in Sources */,
+				8ACE96132A2643C70050C54D /* Macarronada.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +490,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8ACE96112A2643C70050C54D /* Macarronada.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8ACE96122A2643C70050C54D /* Macarronada.xcdatamodel */,
+			);
+			currentVersion = 8ACE96122A2643C70050C54D /* Macarronada.xcdatamodel */;
+			path = Macarronada.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E9B066DD2A1D08F200BDDA48 /* Project object */;
 }
