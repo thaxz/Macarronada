@@ -16,6 +16,7 @@ class PersistentStore : ObservableObject {
     @Published var tasks: [Assignment] = []
     @Published var selectedDate: Date = Date()
     @Published var isPresented: Bool = false
+    @Published var today: Date = Date()
     
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()

@@ -78,6 +78,17 @@ extension HomeView {
                 .fixedSize()
                 .padding()
             }
+            
+            if viewModel.selectedDate == viewModel.today {
+                Spacer()
+                Button {
+                    
+                } label: {
+                    Text("Today")
+                }
+
+            }
+            
             Spacer()
             
         }
