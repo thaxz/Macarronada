@@ -37,7 +37,6 @@ final class PersistentStore : ObservableObject {
     
     func fetchAssignment(){
         let request = NSFetchRequest<AssignmentEntity>(entityName: "AssignmentEntity")
-        //    https://nspredicate.xyz/
         request.predicate = NSPredicate(format: "taskDate == %@", self.selectedDate.stripTime() as CVarArg)
         
         do {
@@ -111,11 +110,42 @@ final class PersistentStore : ObservableObject {
 
     }
     
+    
+    func toggleTask(task: Assignment){
+        let request = NSFetchRequest<AssignmentEntity>(entityName: "AssignmentEntity")
+        request.predicate = NSPredicate(format: "id == %@", task.id)
+        
+        do {
+            let results = try container.viewContext.fetch(request)
+            results.first?.isCompleted = task.isCompleted
+        } catch let error {
+            print(error)
+        }
+    }
+    
     func moveShift(task: Assignment){
         copyShift(task: task)
         deleteAssignmentFromContextMenu(id: task.id)
         saveData()
     }
     
+    
+    func retrieveUnfinished() -> Int{
+        let request = NSFetchRequest<AssignmentEntity>(entityName: "AssignmentEntity")
+        request.predicate = NSPredicate(format: "taskDate == %@", Date.now.stripTime() as CVarArg)
+        request.predicate = NSPredicate(format: "shift == %@", "Manhã")
+        request.predicate = NSPredicate(format: "isCompleted == 0")
+        
+//        print(Date.now.stripTime())
+        
+        do {
+            let results = try container.viewContext.fetch(request)
+            print(results.count)
+            return results.count
+        } catch let error {
+            print(error)
+        }
+        return 0
+    }
 
 }
