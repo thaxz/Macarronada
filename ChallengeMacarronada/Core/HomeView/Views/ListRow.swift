@@ -20,6 +20,7 @@ struct ListRow: View {
                 )
                 .onTapGesture {
                     task.toggleTask()
+                    viewModel.toggleTask(task: task)
                 }
             Spacer()
                 .frame(width: 40)
@@ -40,6 +41,7 @@ struct ListRow: View {
                 }
                 .onTapGesture {
                     task.toggleTask()
+                    viewModel.toggleTask(task: task)
                 }
                 Spacer()
                 Image(systemName: "line.3.horizontal")
