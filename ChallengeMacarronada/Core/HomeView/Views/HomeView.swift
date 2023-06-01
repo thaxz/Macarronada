@@ -10,6 +10,7 @@ import UserNotifications
 
 struct HomeView: View {
     @State var text = ""
+    @State var checkEmptytext: Bool = false
     @StateObject var viewModel : PersistentStore = PersistentStore()
 
     init(){
@@ -26,7 +27,16 @@ struct HomeView: View {
                 HStack {
                     ShiftLine(shift: viewModel.selectedShift)
                     Spacer()
-                    listSection
+                    VStack(spacing: 0){
+                        if checkEmptytext {
+                            Text("Tente escrever uma atividade maior")
+                                .italic()
+                                .font(.system(size: 12, weight: .light))
+                                .foregroundColor(Color.theme.text)
+                                .padding(20)
+                        }
+                        listSection
+                    }
                 }
                 Spacer()
             }
@@ -54,15 +64,11 @@ extension HomeView {
             Text(viewModel.selectedDate, formatter: viewModel.dateFormatter)
                 .font(.system(size: 16, weight: .semibold))
                 .foregroundColor(Color.theme.text)
-            Button {
-                viewModel.isPresented.toggle()
-            } label: {
                 Image(systemName: "calendar")
                     .resizable()
                     .frame(width: 16, height: 16)
                     .foregroundColor(Color.theme.text)
-            }
-            .buttonStyle(.plain)
+            
             .popover(isPresented: $viewModel.isPresented) {
                 DatePicker("Enter date",
                            selection: $viewModel.selectedDate,
@@ -73,12 +79,21 @@ extension HomeView {
                 .padding()
             }
             
+            if viewModel.selectedDate == viewModel.today {
+                Spacer()
+                Button {
+                    
+                } label: {
+                    Text("Today")
+                }
+
+            }
+            
             Spacer()
             
-            Image(systemName: "ellipsis.circle")
-                .resizable()
-                .frame(width: 18, height: 18)
-                .foregroundColor(Color.theme.text)
+        }
+        .onTapGesture {
+            viewModel.isPresented.toggle()
         }
         .padding(.top, 22)
     }
@@ -102,8 +117,13 @@ extension HomeView {
             .padding([.horizontal], 8)
             .cornerRadius(8)
             .onSubmit {
-                viewModel.createNewTask(withText: text)
-                text = ""
+                if text.count <= 4 {
+                    checkEmptytext = true
+                } else {
+                    checkEmptytext = false
+                    viewModel.createNewTask(withText: text)
+                    text = ""
+                }
             }
             .onExitCommand(perform: {
                 text = ""
@@ -119,8 +139,13 @@ extension HomeView {
                             .padding(.trailing, 8)
                             .foregroundColor(Color.theme.text)
                             .onTapGesture {
-                                viewModel.createNewTask(withText: text)
-                                text = ""
+                                if text.count <= 4 {
+                                    checkEmptytext = true
+                                } else {
+                                    checkEmptytext = false
+                                    viewModel.createNewTask(withText: text)
+                                    text = ""
+                                }
                             }
                     }
                 }
