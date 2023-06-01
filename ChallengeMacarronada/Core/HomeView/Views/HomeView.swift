@@ -167,11 +167,11 @@ extension HomeView {
                             Button("Excluir atividade"){
                                 viewModel.deleteAssignmentFromContextMenu(id: task.id)
                             }
-                            Button("Mover para Tarde"){
-                                print("movida para tarde")
-                            }
-                            Button("Mover para Noite"){
-                                print("movida para noite")
+                            
+                            if viewModel.selectedShift != .night{
+                                Button("Mover para próximo turno"){
+                                    viewModel.moveShift(task: task)
+                                }
                             }
                         }
                 }

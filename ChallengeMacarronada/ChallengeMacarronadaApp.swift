@@ -14,6 +14,14 @@ struct ChallengeMacarronadaApp: App {
         WindowGroup {
             HomeView()
                 .frame(width: 390, height: 624)
+                .onAppear{
+                    NotificationManager.shared.requestAuthorization()
+                    NotificationManager.shared.scheduleNotification(
+                        title: "Sou notificacao",
+                        subtitle: "Sim",
+                        hour: 11,
+                        minute: 20)
+                }
         }
     }
     

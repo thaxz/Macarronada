@@ -80,8 +80,6 @@ final class PersistentStore : ObservableObject {
     
     func deleteAssignmentFromContextMenu(id: String){
         for entity in displayedAssignments{
-            print(entity.id, id)
-            
             if entity.id == id{
                 container.viewContext.delete(entity)
                 saveData()
@@ -90,8 +88,43 @@ final class PersistentStore : ObservableObject {
         
     }
     
-    func taskToggle(id : String){
+    func copyShift(task: Assignment){
+        print("antes")
+        print(task.shift)
+        let newAssignment = AssignmentEntity(context: container.viewContext)
+
+        var newShift = task.shift
+        
+        switch newShift {
+        case .morning:
+            newShift = .evening
+            break
+        case .evening:
+            newShift = .night
+            break
+        case .night:
+            break
+        }
+    
+        
+        newAssignment.id = UUID().uuidString
+        newAssignment.text = task.text
+        newAssignment.shift = newShift.rawValue
+        newAssignment.isCompleted = task.isCompleted
+        newAssignment.taskDate = task.taskDate
+        print("depois")
+        print(newAssignment.shift)
+
+    }
+    
+    func moveShift(task: Assignment){
+        copyShift(task: task)
+        deleteAssignmentFromContextMenu(id: task.id)
+        saveData()
+        print(displayedAssignments)
+        print(tasks)
         
     }
+    
 
 }

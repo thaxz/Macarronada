@@ -24,6 +24,7 @@
 		E9B066E92A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */; };
 		E9B066ED2A1D08F300BDDA48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B066EC2A1D08F300BDDA48 /* Assets.xcassets */; };
 		E9B066F02A1D08F300BDDA48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B066EF2A1D08F300BDDA48 /* Preview Assets.xcassets */; };
+		E9EF24DF2A28DBAA00786E44 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EF24DE2A28DBAA00786E44 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		E9B066EC2A1D08F300BDDA48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9B066EF2A1D08F300BDDA48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9B066F12A1D08F300BDDA48 /* ChallengeMacarronada.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChallengeMacarronada.entitlements; sourceTree = "<group>"; };
+		E9EF24DE2A28DBAA00786E44 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		E9B066E72A1D08F200BDDA48 /* ChallengeMacarronada */ = {
 			isa = PBXGroup;
 			children = (
+				E9EF24DD2A28DB9700786E44 /* Managers */,
 				8A0ECC862A2795EA005B5B80 /* Info.plist */,
 				E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */,
 				E9B066F82A1D094E00BDDA48 /* Model */,
@@ -204,6 +207,14 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E9EF24DD2A28DB9700786E44 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E9EF24DE2A28DBAA00786E44 /* NotificationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 				8A0ECC852A278732005B5B80 /* Date.swift in Sources */,
 				E94A331C2A1F93A600C39E2F /* Assignment.swift in Sources */,
 				E9B066E92A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift in Sources */,
+				E9EF24DF2A28DBAA00786E44 /* NotificationManager.swift in Sources */,
 				E94A33252A1F996600C39E2F /* HomeView.swift in Sources */,
 				E94A33202A1F94A400C39E2F /* Shifts.swift in Sources */,
 				E94E5D762A24CC6100EB20ED /* RemainingTasks.swift in Sources */,
