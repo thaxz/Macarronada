@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ListRow: View {
+    @EnvironmentObject var viewModel: PersistentStore
     @State var task: Assignment
+    
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 10)
@@ -54,6 +56,7 @@ struct ListRow: View {
                 .stroke(task.shift.color, lineWidth: 1)
         )
     }
+    
     
     func isStrikedThrough(_ bool: Bool) -> Text {
         if bool {
