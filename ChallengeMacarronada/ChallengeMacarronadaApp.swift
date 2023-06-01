@@ -30,7 +30,7 @@ struct ChallengeMacarronadaApp: App {
             title: "Massa!",
             subtitle: "Boa noite, lembre-se de descansar e até amanhã!",
             hour: 18,
-            minute: 04,
+            minute: 00,
             imageName: "3")
     }
     
