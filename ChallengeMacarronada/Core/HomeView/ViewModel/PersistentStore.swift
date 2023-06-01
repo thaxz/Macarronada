@@ -117,12 +117,27 @@ final class PersistentStore : ObservableObject {
 
     }
     
+    func copyCompletion(task: Assignment){
+        print(task.isCompleted)
+        let newAssignment = AssignmentEntity(context: container.viewContext)
+        newAssignment.id = UUID().uuidString
+        newAssignment.text = task.text
+        newAssignment.shift = task.shift.rawValue
+        newAssignment.isCompleted = !task.isCompleted
+        newAssignment.taskDate = task.taskDate
+        print(newAssignment.isCompleted)
+    }
+    
+    func toggleCompletion(task: Assignment){
+        copyCompletion(task: task)
+        deleteAssignmentFromContextMenu(id: task.id)
+        saveData()
+    }
+    
     func moveShift(task: Assignment){
         copyShift(task: task)
         deleteAssignmentFromContextMenu(id: task.id)
         saveData()
-        print(displayedAssignments)
-        print(tasks)
         
     }
     

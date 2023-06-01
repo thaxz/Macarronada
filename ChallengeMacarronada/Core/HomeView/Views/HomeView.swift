@@ -11,11 +11,7 @@ import UserNotifications
 struct HomeView: View {
     @State var text = ""
     @State var checkEmptytext: Bool = false
-    @StateObject var viewModel : PersistentStore = PersistentStore()
-    
-    init(){
-        _viewModel = StateObject(wrappedValue: PersistentStore())
-    }
+    @EnvironmentObject var viewModel: PersistentStore
     
     var body: some View {
         ZStack {
@@ -51,6 +47,7 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(PersistentStore())
     }
 }
 
@@ -163,12 +160,14 @@ extension HomeView {
             ForEach(viewModel.tasks) { task in
                 if task.shift == viewModel.selectedShift{
                     ListRow(task: task)
+                        .environmentObject(PersistentStore())
                         .contextMenu {
                             Button("Excluir atividade"){
                                 viewModel.deleteAssignmentFromContextMenu(id: task.id)
                             }
                             
                             if viewModel.selectedShift != .night{
+    
                                 Button("Mover para próximo turno"){
                                     viewModel.moveShift(task: task)
                                 }

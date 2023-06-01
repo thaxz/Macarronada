@@ -10,9 +10,11 @@ import SwiftUI
 @main
 struct ChallengeMacarronadaApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
+    @StateObject private var viewModel = PersistentStore()
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .environmentObject(viewModel)
                 .frame(width: 390, height: 624)
                 .onAppear{
                     NotificationManager.shared.requestAuthorization()
@@ -46,7 +48,7 @@ struct ChallengeMacarronadaApp: App {
             self.popover = NSPopover()
             self.popover.contentSize = NSSize(width: 390, height: 624)
             self.popover.behavior = .transient
-            self.popover.contentViewController = NSHostingController(rootView: HomeView())
+            self.popover.contentViewController = NSHostingController(rootView: HomeView().environmentObject(PersistentStore()))
     
         }
     

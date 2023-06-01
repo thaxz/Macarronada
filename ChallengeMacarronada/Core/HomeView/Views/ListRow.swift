@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ListRow: View {
+    @EnvironmentObject var viewModel: PersistentStore
     @State var task: Assignment
+    
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 10)
@@ -17,7 +19,8 @@ struct ListRow: View {
                         Color.theme.background
                 )
                 .onTapGesture {
-                    task.toggleTask()
+                    viewModel.toggleCompletion(task: task)
+//                    task.toggleTask()
                 }
             Spacer()
                 .frame(width: 40)
@@ -54,6 +57,7 @@ struct ListRow: View {
                 .stroke(task.shift.color, lineWidth: 1)
         )
     }
+    
     
     func isStrikedThrough(_ bool: Bool) -> Text {
         if bool {
