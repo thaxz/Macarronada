@@ -8,7 +8,8 @@ import SwiftUI
 import CoreData
 import Foundation
 
-class PersistentStore : ObservableObject {
+@MainActor
+final class PersistentStore : ObservableObject {
 
     let container: NSPersistentContainer
     @Published var displayedAssignments : [AssignmentEntity] = []

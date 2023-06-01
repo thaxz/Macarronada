@@ -19,7 +19,6 @@
 		E94A331C2A1F93A600C39E2F /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A331B2A1F93A600C39E2F /* Assignment.swift */; };
 		E94A33202A1F94A400C39E2F /* Shifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A331F2A1F94A400C39E2F /* Shifts.swift */; };
 		E94A33252A1F996600C39E2F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A33242A1F996600C39E2F /* HomeView.swift */; };
-		E94A33282A1F998E00C39E2F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A33272A1F998E00C39E2F /* HomeViewModel.swift */; };
 		E94E5D762A24CC6100EB20ED /* RemainingTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E5D752A24CC6100EB20ED /* RemainingTasks.swift */; };
 		E94E5D782A24D0C100EB20ED /* FreeTimeModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E5D772A24D0C100EB20ED /* FreeTimeModal.swift */; };
 		E9B066E92A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */; };
@@ -41,7 +40,6 @@
 		E94A331B2A1F93A600C39E2F /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		E94A331F2A1F94A400C39E2F /* Shifts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shifts.swift; sourceTree = "<group>"; };
 		E94A33242A1F996600C39E2F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		E94A33272A1F998E00C39E2F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E94E5D752A24CC6100EB20ED /* RemainingTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingTasks.swift; sourceTree = "<group>"; };
 		E94E5D772A24D0C100EB20ED /* FreeTimeModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeModal.swift; sourceTree = "<group>"; };
 		E9B066E52A1D08F200BDDA48 /* ChallengeMacarronada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeMacarronada.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				8ACE96142A2644610050C54D /* PersistentStore.swift */,
-				E94A33272A1F998E00C39E2F /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -284,7 +281,6 @@
 				E9319A9F2A20EAA200DC635E /* ShiftLine.swift in Sources */,
 				8A0ECC852A278732005B5B80 /* Date.swift in Sources */,
 				E94A331C2A1F93A600C39E2F /* Assignment.swift in Sources */,
-				E94A33282A1F998E00C39E2F /* HomeViewModel.swift in Sources */,
 				E9B066E92A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift in Sources */,
 				E94A33252A1F996600C39E2F /* HomeView.swift in Sources */,
 				E94A33202A1F94A400C39E2F /* Shifts.swift in Sources */,

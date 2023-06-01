@@ -22,18 +22,23 @@ struct ListRow: View {
             Spacer()
                 .frame(width: 40)
             HStack(spacing: 14){
-                Image(systemName:
-                        task.isCompleted ? "circle.fill"
-                      : "circle"
-                )
-                .resizable()
-                .frame(width: 14, height: 14)
-                
-                .foregroundColor(Color.theme.text)
-                isStrikedThrough(task.isCompleted)
+                Group {
+                    Image(systemName:
+                            task.isCompleted ? "circle.fill"
+                          : "circle"
+                    )
+                    .resizable()
+                    .frame(width: 14, height: 14)
+                    
                     .foregroundColor(Color.theme.text)
-                    .font(.system(size: 12, weight: .regular))
-                    .multilineTextAlignment(.leading)
+                    isStrikedThrough(task.isCompleted)
+                        .foregroundColor(Color.theme.text)
+                        .font(.system(size: 12, weight: .regular))
+                        .multilineTextAlignment(.leading)
+                }
+                .onTapGesture {
+                    task.toggleTask()
+                }
                 Spacer()
                 Image(systemName: "line.3.horizontal")
                     .resizable()
