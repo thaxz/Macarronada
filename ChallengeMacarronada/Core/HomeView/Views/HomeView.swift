@@ -54,15 +54,11 @@ extension HomeView {
             Text(viewModel.selectedDate, formatter: viewModel.dateFormatter)
                 .font(.system(size: 16, weight: .semibold))
                 .foregroundColor(Color.theme.text)
-            Button {
-                viewModel.isPresented.toggle()
-            } label: {
                 Image(systemName: "calendar")
                     .resizable()
                     .frame(width: 16, height: 16)
                     .foregroundColor(Color.theme.text)
-            }
-            .buttonStyle(.plain)
+            
             .popover(isPresented: $viewModel.isPresented) {
                 DatePicker("Enter date",
                            selection: $viewModel.selectedDate,
@@ -72,13 +68,11 @@ extension HomeView {
                 .fixedSize()
                 .padding()
             }
-            
             Spacer()
             
-            Image(systemName: "ellipsis.circle")
-                .resizable()
-                .frame(width: 18, height: 18)
-                .foregroundColor(Color.theme.text)
+        }
+        .onTapGesture {
+            viewModel.isPresented.toggle()
         }
         .padding(.top, 22)
     }
