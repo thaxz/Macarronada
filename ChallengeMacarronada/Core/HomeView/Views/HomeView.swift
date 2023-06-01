@@ -6,16 +6,15 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct HomeView: View {
-//    @StateObject private var viewModel: HomeViewModel
     @State var text = ""
     @StateObject var viewModel : PersistentStore = PersistentStore()
 
     init(){
         _viewModel = StateObject(wrappedValue: PersistentStore())
     }
-    
     
     var body: some View {
         ZStack {
@@ -32,6 +31,9 @@ struct HomeView: View {
                 Spacer()
             }
             .padding(.horizontal, 24)
+            .onChange(of: viewModel.selectedDate) { newValue in
+                viewModel.saveData()
+            }
         }
     }
 }
