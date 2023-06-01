@@ -19,8 +19,7 @@ struct ListRow: View {
                         Color.theme.background
                 )
                 .onTapGesture {
-                    viewModel.toggleCompletion(task: task)
-//                    task.toggleTask()
+                    task.toggleTask()
                 }
             Spacer()
                 .frame(width: 40)

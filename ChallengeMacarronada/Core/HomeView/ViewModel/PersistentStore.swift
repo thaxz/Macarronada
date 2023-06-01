@@ -89,10 +89,7 @@ final class PersistentStore : ObservableObject {
     }
     
     func copyShift(task: Assignment){
-        print("antes")
-        print(task.shift)
         let newAssignment = AssignmentEntity(context: container.viewContext)
-
         var newShift = task.shift
         
         switch newShift {
@@ -105,40 +102,19 @@ final class PersistentStore : ObservableObject {
         case .night:
             break
         }
-    
-        
+
         newAssignment.id = UUID().uuidString
         newAssignment.text = task.text
         newAssignment.shift = newShift.rawValue
         newAssignment.isCompleted = task.isCompleted
         newAssignment.taskDate = task.taskDate
-        print("depois")
-        print(newAssignment.shift)
 
-    }
-    
-    func copyCompletion(task: Assignment){
-        print(task.isCompleted)
-        let newAssignment = AssignmentEntity(context: container.viewContext)
-        newAssignment.id = UUID().uuidString
-        newAssignment.text = task.text
-        newAssignment.shift = task.shift.rawValue
-        newAssignment.isCompleted = !task.isCompleted
-        newAssignment.taskDate = task.taskDate
-        print(newAssignment.isCompleted)
-    }
-    
-    func toggleCompletion(task: Assignment){
-        copyCompletion(task: task)
-        deleteAssignmentFromContextMenu(id: task.id)
-        saveData()
     }
     
     func moveShift(task: Assignment){
         copyShift(task: task)
         deleteAssignmentFromContextMenu(id: task.id)
         saveData()
-        
     }
     
 
