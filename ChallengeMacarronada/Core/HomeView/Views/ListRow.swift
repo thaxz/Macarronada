@@ -16,7 +16,11 @@ struct ListRow: View {
                     task.isCompleted ? task.shift.color :
                         Color.theme.background
                 )
-            
+                .onTapGesture {
+                    task.toggleTask()
+                }
+            Spacer()
+                .frame(width: 40)
             HStack(spacing: 14){
                 Image(systemName:
                         task.isCompleted ? "circle.fill"
@@ -24,6 +28,7 @@ struct ListRow: View {
                 )
                 .resizable()
                 .frame(width: 14, height: 14)
+                
                 .foregroundColor(Color.theme.text)
                 isStrikedThrough(task.isCompleted)
                     .foregroundColor(Color.theme.text)
@@ -36,9 +41,6 @@ struct ListRow: View {
                     .foregroundColor(Color.theme.text)
             }
             .padding(.horizontal, 12)
-        }
-        .onTapGesture {
-            task.toggleTask()
         }
         .frame(minHeight: 56)
         .frame(maxWidth: .infinity)
