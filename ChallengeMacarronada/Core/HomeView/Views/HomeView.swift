@@ -12,7 +12,7 @@ struct HomeView: View {
     @State var text = ""
     @State var checkEmptytext: Bool = false
     @StateObject var viewModel : PersistentStore = PersistentStore()
-
+    
     init(){
         _viewModel = StateObject(wrappedValue: PersistentStore())
     }
@@ -59,41 +59,47 @@ struct HomeView_Previews: PreviewProvider {
 extension HomeView {
     
     private var calendarSection: some View {
-        HStack(alignment: .center, spacing: 12){
-            Spacer()
-            Text(viewModel.selectedDate, formatter: viewModel.dateFormatter)
-                .font(.system(size: 16, weight: .semibold))
-                .foregroundColor(Color.theme.text)
+        ZStack {
+            if viewModel.selectedDate.stripTime() != viewModel.today.stripTime() {
+                HStack(alignment: .center){
+                    Spacer()
+                    Button {
+                        viewModel.selectedDate = viewModel.today
+                        } label: {
+                            Text("Go to Today")
+                                .underline()
+                                .font(.system(size: 12, weight: .light))
+                                .padding(.leading, 4)
+                                .foregroundColor(viewModel.selectedShift.color)
+                    }
+                        .buttonStyle(.plain)
+                }
+            }
+            HStack(alignment: .center, spacing: 12){
+                Spacer()
+                Text(viewModel.selectedDate, formatter: viewModel.dateFormatter)
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundColor(Color.theme.text)
                 Image(systemName: "calendar")
                     .resizable()
                     .frame(width: 16, height: 16)
                     .foregroundColor(Color.theme.text)
-            
-            .popover(isPresented: $viewModel.isPresented) {
-                DatePicker("Enter date",
-                           selection: $viewModel.selectedDate,
-                           displayedComponents: [.date])
-                .datePickerStyle(.graphical)
-                .labelsHidden()
-                .fixedSize()
-                .padding()
-            }
-            
-            if viewModel.selectedDate == viewModel.today {
+                
+                    .popover(isPresented: $viewModel.isPresented) {
+                        DatePicker("Enter date",
+                                   selection: $viewModel.selectedDate,
+                                   displayedComponents: [.date])
+                        .datePickerStyle(.graphical)
+                        .labelsHidden()
+                        .fixedSize()
+                        .padding()
+                    }
                 Spacer()
-                Button {
-                    
-                } label: {
-                    Text("Today")
-                }
-
+                
             }
-            
-            Spacer()
-            
-        }
-        .onTapGesture {
-            viewModel.isPresented.toggle()
+            .onTapGesture {
+                viewModel.isPresented.toggle()
+            }
         }
         .padding(.top, 22)
     }
@@ -153,33 +159,33 @@ extension HomeView {
     }
     
     private var listSection: some View {
-            List {
-                ForEach(viewModel.tasks) { task in
-                    if task.shift == viewModel.selectedShift{
-                        ListRow(task: task)
-                            .contextMenu {
-                                Button("Excluir atividade"){
-                                    viewModel.deleteAssignmentFromContextMenu(id: task.id)
-                                }
-                                Button("Mover para Tarde"){
-                                    print("movida para tarde")
-                                }
-                                Button("Mover para Noite"){
-                                    print("movida para noite")
-                                }
+        List {
+            ForEach(viewModel.tasks) { task in
+                if task.shift == viewModel.selectedShift{
+                    ListRow(task: task)
+                        .contextMenu {
+                            Button("Excluir atividade"){
+                                viewModel.deleteAssignmentFromContextMenu(id: task.id)
                             }
-                    }
-                    
+                            Button("Mover para Tarde"){
+                                print("movida para tarde")
+                            }
+                            Button("Mover para Noite"){
+                                print("movida para noite")
+                            }
+                        }
                 }
-                .onDelete(perform: { IndexSet in
-                    viewModel.deleteAssignment(indexSet: IndexSet)
-                })
-                .onMove { indices, destination in
-                    viewModel.tasks.move(fromOffsets: indices, toOffset: destination)
-                }
+                
             }
-            .scrollContentBackground(.hidden)
-            .listStyle(PlainListStyle())
+            .onDelete(perform: { IndexSet in
+                viewModel.deleteAssignment(indexSet: IndexSet)
+            })
+            .onMove { indices, destination in
+                viewModel.tasks.move(fromOffsets: indices, toOffset: destination)
+            }
         }
+        .scrollContentBackground(.hidden)
+        .listStyle(PlainListStyle())
+    }
     
 }
