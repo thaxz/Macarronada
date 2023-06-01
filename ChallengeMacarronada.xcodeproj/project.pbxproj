@@ -29,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		8A0ECC842A278732005B5B80 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		8A0ECC862A2795EA005B5B80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8ACE96122A2643C70050C54D /* Macarronada.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Macarronada.xcdatamodel; sourceTree = "<group>"; };
 		8ACE96142A2644610050C54D /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
 		8AF8A9212A20F1B40024C505 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = SOURCE_ROOT; };
@@ -134,6 +135,7 @@
 		E9B066E72A1D08F200BDDA48 /* ChallengeMacarronada */ = {
 			isa = PBXGroup;
 			children = (
+				8A0ECC862A2795EA005B5B80 /* Info.plist */,
 				E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */,
 				E9B066F82A1D094E00BDDA48 /* Model */,
 				E9B066FB2A1D096E00BDDA48 /* Components */,
@@ -426,6 +428,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChallengeMacarronada/Info.plist;
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -454,6 +457,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChallengeMacarronada/Info.plist;
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
