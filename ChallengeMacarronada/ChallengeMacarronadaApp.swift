@@ -23,8 +23,8 @@ struct ChallengeMacarronadaApp: App {
         NotificationManager.shared.scheduleNotification(
             title: "Show!",
             subtitle: "Bom almoço, aproveite o descanso e até já :)",
-            hour: 12,
-            minute: 0,
+            hour: 9,
+            minute: 55,
             imageName: "2")
         NotificationManager.shared.scheduleNotification(
             title: "Massa!",

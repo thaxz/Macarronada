@@ -9,7 +9,8 @@ import SwiftUI
 
 struct CustomSegmentedControl: View {
     @Binding var selectedOption: Shifts
-    
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
         HStack(spacing: 0) {
             ForEach(Shifts.allCases, id: \.self) { option in
@@ -24,7 +25,7 @@ struct CustomSegmentedControl: View {
                 }
                 .overlay(
                     Text(option.rawValue)
-                        .foregroundColor(Color.theme.text)
+                        .foregroundColor(colorScheme == .dark ? Color.theme.text : (option == selectedOption ? Color.white : Color.gray))
                 )
                 .onTapGesture {
                     withAnimation(.interactiveSpring()) {

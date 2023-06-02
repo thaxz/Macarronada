@@ -63,7 +63,7 @@ extension HomeView {
                     Button {
                         viewModel.selectedDate = viewModel.today
                         } label: {
-                            Text("Go to Today")
+                            Text("Ir para hoje")
                                 .underline()
                                 .font(.system(size: 12, weight: .light))
                                 .padding(.leading, 4)
