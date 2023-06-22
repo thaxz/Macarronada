@@ -160,6 +160,7 @@ extension HomeView {
             ForEach(viewModel.tasks) { task in
                 if task.shift == viewModel.selectedShift{
                     ListRow(task: task)
+                        .help("Double click to assign task to next shift")
                         .environmentObject(PersistentStore())
                         .contextMenu {
                             Button("Excluir atividade"){
