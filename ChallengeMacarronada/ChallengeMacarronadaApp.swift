@@ -38,8 +38,10 @@ struct ChallengeMacarronadaApp: App {
         WindowGroup {
             HomeView()
                 .environmentObject(viewModel)
-                .frame(width: 390, height: 624)
+                .frame(maxWidth: 390, maxHeight: 624)
+                .frame(minWidth: 390, minHeight: 624)
         }
+        .windowResizability(.contentSize)
     }
     
     class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
