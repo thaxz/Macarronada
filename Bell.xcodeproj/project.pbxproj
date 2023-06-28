@@ -49,7 +49,7 @@
 		E94A33242A1F996600C39E2F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E94E5D752A24CC6100EB20ED /* RemainingTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingTasks.swift; sourceTree = "<group>"; };
 		E94E5D772A24D0C100EB20ED /* FreeTimeModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeModal.swift; sourceTree = "<group>"; };
-		E9B066E52A1D08F200BDDA48 /* ChallengeMacarronada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeMacarronada.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9B066E52A1D08F200BDDA48 /* Bell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMacarronadaApp.swift; sourceTree = "<group>"; };
 		E9B066EC2A1D08F300BDDA48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9B066EF2A1D08F300BDDA48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		E9B066E62A1D08F200BDDA48 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E9B066E52A1D08F200BDDA48 /* ChallengeMacarronada.app */,
+				E9B066E52A1D08F200BDDA48 /* Bell.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,9 +229,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E9B066E42A1D08F200BDDA48 /* ChallengeMacarronada */ = {
+		E9B066E42A1D08F200BDDA48 /* Bell */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E9B066F42A1D08F300BDDA48 /* Build configuration list for PBXNativeTarget "ChallengeMacarronada" */;
+			buildConfigurationList = E9B066F42A1D08F300BDDA48 /* Build configuration list for PBXNativeTarget "Bell" */;
 			buildPhases = (
 				E9B066E12A1D08F200BDDA48 /* Sources */,
 				E9B066E22A1D08F200BDDA48 /* Frameworks */,
@@ -241,9 +241,9 @@
 			);
 			dependencies = (
 			);
-			name = ChallengeMacarronada;
+			name = Bell;
 			productName = ChallengeMacarronada;
-			productReference = E9B066E52A1D08F200BDDA48 /* ChallengeMacarronada.app */;
+			productReference = E9B066E52A1D08F200BDDA48 /* Bell.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -261,7 +261,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E9B066E02A1D08F200BDDA48 /* Build configuration list for PBXProject "ChallengeMacarronada" */;
+			buildConfigurationList = E9B066E02A1D08F200BDDA48 /* Build configuration list for PBXProject "Bell" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -274,7 +274,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E9B066E42A1D08F200BDDA48 /* ChallengeMacarronada */,
+				E9B066E42A1D08F200BDDA48 /* Bell */,
 			);
 		};
 /* End PBXProject section */
@@ -449,8 +449,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChallengeMacarronada/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Bell;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_LSUIElement = NO;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -479,8 +480,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChallengeMacarronada/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Bell;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_LSUIElement = NO;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -497,7 +499,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E9B066E02A1D08F200BDDA48 /* Build configuration list for PBXProject "ChallengeMacarronada" */ = {
+		E9B066E02A1D08F200BDDA48 /* Build configuration list for PBXProject "Bell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E9B066F22A1D08F300BDDA48 /* Debug */,
@@ -506,7 +508,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E9B066F42A1D08F300BDDA48 /* Build configuration list for PBXNativeTarget "ChallengeMacarronada" */ = {
+		E9B066F42A1D08F300BDDA48 /* Build configuration list for PBXNativeTarget "Bell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E9B066F52A1D08F300BDDA48 /* Debug */,
