@@ -57,6 +57,17 @@ extension HomeView {
     
     private var calendarSection: some View {
         ZStack {
+            HStack{
+                Spacer()
+                Image(systemName: "xmark")
+                    .resizable()
+                    .frame(width: 16, height: 16)
+                    .bold()
+                    .onTapGesture {
+                        NSApplication.shared.terminate(self)
+                    }
+            }
+            
             if viewModel.selectedDate.stripTime() != viewModel.today.stripTime() {
                 HStack(alignment: .center){
                     Spacer()
@@ -94,6 +105,7 @@ extension HomeView {
                 Spacer()
                 
             }
+            
             .onTapGesture {
                 viewModel.isPresented.toggle()
             }
