@@ -70,7 +70,6 @@ extension HomeView {
             
             if viewModel.selectedDate.stripTime() != viewModel.today.stripTime() {
                 HStack(alignment: .center){
-                    Spacer()
                     Button {
                         viewModel.selectedDate = viewModel.today
                         } label: {
@@ -81,6 +80,7 @@ extension HomeView {
                                 .foregroundColor(viewModel.selectedShift.color)
                     }
                         .buttonStyle(.plain)
+                    Spacer()
                 }
             }
             HStack(alignment: .center, spacing: 12){
