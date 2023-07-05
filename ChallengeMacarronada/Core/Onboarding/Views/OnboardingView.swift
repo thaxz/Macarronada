@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    @State var action: () -> Void
     var body: some View {
         ZStack {
             Color.theme.background
@@ -17,7 +18,7 @@ struct OnboardingView: View {
                     Spacer()
                     Image(systemName: "ellipsis.circle")
                         .resizable()
-                        .frame(width: 32, height: 32)
+                        .frame(width: 24, height: 24)
                         .foregroundColor(Color.theme.text)
                 }
                 Image("bellBird")
@@ -35,13 +36,14 @@ struct OnboardingView: View {
                 Spacer()
                     .frame(height: 30)
                 Button {
+                   action()
                     
                 } label: {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .fill(Color.theme.evening)
                         Text("Começar a usar Bell")
-                            .font(.system(size: 16, weight: .bold))
+                            .font(.system(size: 14, weight: .semibold))
                             .foregroundColor(Color.theme.text)
                     }
                     .frame(width: 220, height: 40)
@@ -58,6 +60,6 @@ struct OnboardingView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        OnboardingView(action: {})
     }
 }

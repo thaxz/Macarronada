@@ -36,7 +36,7 @@ struct ChallengeMacarronadaApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            OnboardingView(action: appDelegate.togglePopover)
                 .environmentObject(viewModel)
                 .frame(maxWidth: 390, maxHeight: 624)
                 .frame(minWidth: 390, minHeight: 624)
@@ -44,18 +44,19 @@ struct ChallengeMacarronadaApp: App {
         .windowResizability(.contentSize)
     }
     
+    
+    
+    // MARK: AppDelegate
+    
     class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
         
         private var statusItem: NSStatusItem!
         private var popover: NSPopover!
-        //        private var vm: HomeViewModel!
-        
         
         @MainActor
         func applicationDidFinishLaunching(_ notification: Notification) {
             
             statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-            //            self.vm = HomeViewModel()
             
             if let statusButton = statusItem.button {
                 statusButton.image = NSImage(systemSymbolName: "bell.fill", accessibilityDescription: "Heart")
@@ -68,6 +69,13 @@ struct ChallengeMacarronadaApp: App {
             self.popover.contentViewController = NSHostingController(rootView: HomeView().environmentObject(PersistentStore()))
             
         }
+        
+        @objc func showPopover(_ sender: AnyObject? = nil) {
+                if let button = statusItem?.button {
+                    NSApplication.shared.activate(ignoringOtherApps: true)
+                    popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+                }
+            }
         
         @objc func togglePopover(){
             Task {
@@ -83,5 +91,4 @@ struct ChallengeMacarronadaApp: App {
         }
         
     }
-    
 }

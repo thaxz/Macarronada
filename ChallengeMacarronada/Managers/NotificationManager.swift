@@ -55,6 +55,4 @@ class NotificationManager {
         UNUserNotificationCenter.current().add(request)
         UNUserNotificationCenter.current().setNotificationCategories([generalCategory])
     }
-    
-    
 }
