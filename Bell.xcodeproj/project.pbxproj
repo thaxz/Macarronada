@@ -24,6 +24,7 @@
 		E94A33252A1F996600C39E2F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94A33242A1F996600C39E2F /* HomeView.swift */; };
 		E94E5D762A24CC6100EB20ED /* RemainingTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E5D752A24CC6100EB20ED /* RemainingTasks.swift */; };
 		E94E5D782A24D0C100EB20ED /* FreeTimeModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E5D772A24D0C100EB20ED /* FreeTimeModal.swift */; };
+		E979F9472A562D740066B52A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E979F9462A562D740066B52A /* OnboardingView.swift */; };
 		E9B066E92A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */; };
 		E9B066ED2A1D08F300BDDA48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B066EC2A1D08F300BDDA48 /* Assets.xcassets */; };
 		E9B066F02A1D08F300BDDA48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B066EF2A1D08F300BDDA48 /* Preview Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		E94A33242A1F996600C39E2F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E94E5D752A24CC6100EB20ED /* RemainingTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingTasks.swift; sourceTree = "<group>"; };
 		E94E5D772A24D0C100EB20ED /* FreeTimeModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeModal.swift; sourceTree = "<group>"; };
+		E979F9462A562D740066B52A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		E9B066E52A1D08F200BDDA48 /* Bell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMacarronadaApp.swift; sourceTree = "<group>"; };
 		E9B066EC2A1D08F300BDDA48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,6 +132,22 @@
 			path = PopUps;
 			sourceTree = "<group>";
 		};
+		E979F9442A562D5E0066B52A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E979F9452A562D670066B52A /* Views */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E979F9452A562D670066B52A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E979F9462A562D740066B52A /* OnboardingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E9A59DA32A4503D500C85A35 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +203,7 @@
 		E9B066F72A1D092600BDDA48 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E979F9442A562D5E0066B52A /* Onboarding */,
 				E94E5D742A24CBEB00EB20ED /* PopUps */,
 				E94A33212A1F993300C39E2F /* HomeView */,
 			);
@@ -314,6 +333,7 @@
 				8ACE96152A2644610050C54D /* PersistentStore.swift in Sources */,
 				E9319AA12A20ED9300DC635E /* ListRow.swift in Sources */,
 				E9319AA32A20F0B700DC635E /* PreviewProvider.swift in Sources */,
+				E979F9472A562D740066B52A /* OnboardingView.swift in Sources */,
 				8ACE96132A2643C70050C54D /* Macarronada.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
