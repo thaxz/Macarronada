@@ -37,7 +37,7 @@ struct OnboardingView: View {
                     .frame(height: 30)
                 Button {
                    action()
-                    
+                    NSApplication.shared.mainWindow?.close()
                 } label: {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
