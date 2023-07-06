@@ -36,15 +36,13 @@ struct ChallengeMacarronadaApp: App {
     
     var body: some Scene {
         WindowGroup {
-            OnboardingView(action: appDelegate.togglePopover)
+            OnboardingView(action: appDelegate.showPopover)
                 .environmentObject(viewModel)
                 .frame(maxWidth: 390, maxHeight: 624)
                 .frame(minWidth: 390, minHeight: 624)
         }
         .windowResizability(.contentSize)
     }
-    
-    
     
     // MARK: AppDelegate
     
@@ -70,7 +68,7 @@ struct ChallengeMacarronadaApp: App {
             
         }
         
-        @objc func showPopover(_ sender: AnyObject? = nil) {
+        @objc func showPopover() {
                 if let button = statusItem?.button {
                     NSApplication.shared.activate(ignoringOtherApps: true)
                     popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)

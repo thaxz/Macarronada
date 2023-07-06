@@ -9,6 +9,7 @@ import SwiftUI
 import UserNotifications
 
 struct HomeView: View {
+    @State var isPopover: Bool = false
     @State var text = ""
     @State var checkEmptytext: Bool = false
     @EnvironmentObject var viewModel: PersistentStore
@@ -59,13 +60,23 @@ extension HomeView {
         ZStack {
             HStack{
                 Spacer()
-                Image(systemName: "xmark")
-                    .resizable()
-                    .frame(width: 16, height: 16)
-                    .bold()
+                Button {
+                    self.isPopover.toggle()
+                } label: {
+                    Image(systemName: "ellipsis.circle")
+                        .resizable()
+                        .frame(width: 16, height: 16)
+                }.popover(isPresented: self.$isPopover, arrowEdge: .bottom) {
+                    VStack{
+                        Text("Fechar Bell")
+                            .font(.system(size: 12, weight: .regular))
+                            .foregroundColor(Color.theme.text)
+                    }
+                    .frame(width: 100, height: 30)
                     .onTapGesture {
                         NSApplication.shared.terminate(self)
                     }
+                }.buttonStyle(PlainButtonStyle())
             }
             
             if viewModel.selectedDate.stripTime() != viewModel.today.stripTime() {
