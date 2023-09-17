@@ -11,8 +11,8 @@ struct FreeTimeModal: View {
     
     let shift: Shifts
     let image: String
-    let title: String
-    let message: String
+    let title: LocalizedStringKey
+    let message: LocalizedStringKey
     let seeActivities: () -> Void
     
     init(shift: Shifts, seeActivities: @escaping () -> Void){
@@ -25,12 +25,12 @@ struct FreeTimeModal: View {
             self.message = "Error"
         case .evening:
             self.image = "lunchImage"
-            self.title = "Show!"
-            self.message = "Bom almoço, aproveite o descanso e até já :)"
+            self.title = LocalizedStringKey("freeTimeTitleEveningKey")
+            self.message = LocalizedStringKey("freeTimeEveningMessageKey")
         case .night:
             self.image = "dinnerImage"
-            self.title = "Massa!"
-            self.message = "Boa noite, lembre-se de descansar e até amanhã!"
+            self.title = LocalizedStringKey("freeTimeTitleNightKey")
+            self.message = LocalizedStringKey("freeTimeNightMessageKey")
         }
     }
     
@@ -52,7 +52,7 @@ struct FreeTimeModal: View {
                 Button {
                     seeActivities()
                 } label: {
-                    Text("Ver Atividades")
+                    Text(LocalizedStringKey("activitiesKey"))
                         .font(.system(size: 12, weight: .regular))
                         .foregroundColor(shift.color)
                         .underline()

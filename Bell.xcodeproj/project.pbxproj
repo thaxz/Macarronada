@@ -76,7 +76,6 @@
 		8AAAE2B12A29290400EE8F91 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8A0ECC862A2795EA005B5B80 /* Info.plist */,
 				E9B066EC2A1D08F300BDDA48 /* Assets.xcassets */,
 				8AAAE2B22A29293E00EE8F91 /* ilustrações bell-01.png */,
 				8AAAE2B32A29293E00EE8F91 /* ilustrações bell-02.png */,
@@ -156,7 +155,6 @@
 		E97BA7D92AB7AF3B00E72F5A /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				E9B066F12A1D08F300BDDA48 /* ChallengeMacarronada.entitlements */,
 				8ACE96112A2643C70050C54D /* Macarronada.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -197,6 +195,8 @@
 		E9B066E72A1D08F200BDDA48 /* ChallengeMacarronada */ = {
 			isa = PBXGroup;
 			children = (
+				E9B066F12A1D08F300BDDA48 /* ChallengeMacarronada.entitlements */,
+				8A0ECC862A2795EA005B5B80 /* Info.plist */,
 				E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */,
 				8AAAE2B12A29290400EE8F91 /* Resources */,
 				E97BA7D92AB7AF3B00E72F5A /* CoreData */,

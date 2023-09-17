@@ -18,7 +18,7 @@
 // MARK: Pop-ups
 
 "goodMorningKey" = "Good morning!";
-"remainingQuestionKey" = "Would you like to reschedule the tasks that were left from yesterday for today?"
+"remainingQuestionKey" = "Would you like to reschedule the tasks that were left from yesterday for today?";
 "yesKey" = "Yes";
 "noKey" = "No";
 
