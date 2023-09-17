@@ -13,7 +13,7 @@
 "welcomeKey" = "Welcome to Bell!";
 "onboardingTextKey" = "Bell divide o dia em turnos através de uma interface prática e manda notificações ao longo do dia para simplificar o seu processo de organização.";
 "startKey" = "Começar a usar Bell";
-"closeKey" = "Fechar Bell";
+"closeKey" = "Quit Bell";
 
 // MARK: Pop-ups
 
