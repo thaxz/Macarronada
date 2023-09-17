@@ -27,7 +27,7 @@ struct HomeView: View {
                     Spacer()
                     VStack(spacing: 0){
                         if checkEmptytext {
-                            Text("Tente escrever uma atividade maior")
+                            Text(LocalizedStringKey("emptyTextKey"))
                                 .italic()
                                 .font(.system(size: 12, weight: .light))
                                 .foregroundColor(Color.theme.text)
@@ -69,7 +69,7 @@ extension HomeView {
                         .frame(width: 16, height: 16)
                 }.popover(isPresented: self.$isPopover, arrowEdge: .bottom) {
                     VStack{
-                        Text("Fechar Bell")
+                        Text(LocalizedStringKey("closeKey"))
                             .font(.system(size: 12, weight: .regular))
                             .foregroundColor(Color.theme.text)
                     }
@@ -85,7 +85,7 @@ extension HomeView {
                     Button {
                         viewModel.selectedDate = viewModel.today
                         } label: {
-                            Text("Ir para hoje")
+                            Text(LocalizedStringKey("goToTodayKey"))
                                 .underline()
                                 .font(.system(size: 12, weight: .light))
                                 .padding(.leading, 4)
@@ -106,7 +106,7 @@ extension HomeView {
                     .foregroundColor(Color.theme.text)
                 
                     .popover(isPresented: $viewModel.isPresented) {
-                        DatePicker("Enter date",
+                        DatePicker(LocalizedStringKey("selectDateKey"),
                                    selection: $viewModel.selectedDate,
                                    displayedComponents: [.date])
                         .datePickerStyle(.graphical)
@@ -134,7 +134,7 @@ extension HomeView {
     private var textfieldSection: some View {
         TextField("", text: $text)
             .placeholder(when: text.isEmpty) {
-                Text("Adicionar nova atividade")
+                Text(LocalizedStringKey("addNewActivityKey"))
                     .italic()
                     .font(.system(size: 12, weight: .light))
                     .padding(.leading, 4)
@@ -164,7 +164,7 @@ extension HomeView {
                     HStack {
                         Spacer()
                         Image(systemName: "plus")
-                            .help("Click to create a new task")
+                            .help(LocalizedStringKey("createNewTaskKey"))
                             .padding(.trailing, 8)
                             .foregroundColor(Color.theme.text)
                             .onTapGesture {
@@ -186,22 +186,20 @@ extension HomeView {
             ForEach(viewModel.tasks) { task in
                 if task.shift == viewModel.selectedShift{
                     ListRow(task: task)
-                        .help("Double click to assign task to next shift")
+                        .help(LocalizedStringKey("helpNextShiftKey"))
                         .environmentObject(PersistentStore())
                         .contextMenu {
-                            Button("Excluir atividade"){
+                            Button(LocalizedStringKey("deleteActivityButtonKey")){
                                 viewModel.deleteAssignmentFromContextMenu(id: task.id)
                             }
                             
                             if viewModel.selectedShift != .night{
-    
-                                Button("Mover para próximo turno"){
+                                Button(LocalizedStringKey("moveShiftButtonKey")){
                                     viewModel.moveShift(task: task)
                                 }
                             }
                         }
                 }
-                
             }
             .onDelete(perform: { IndexSet in
                 viewModel.deleteAssignment(indexSet: IndexSet)

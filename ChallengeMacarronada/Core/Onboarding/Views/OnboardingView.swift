@@ -21,10 +21,10 @@ struct OnboardingView: View {
                     .frame(width: 150, height: 150)
                 Spacer()
                     .frame(height: 30)
-                Text("Seja bem vindo a Bell")
+                Text(LocalizedStringKey("welcomeKey"))
                     .font(.system(size: 22, weight: .semibold))
                     .foregroundColor(Color.theme.text)
-                Text("Bell divide o dia em turnos através de uma interface prática e manda notificações ao longo do dia para simplificar o seu processo de organização.")
+                Text(LocalizedStringKey("onboardingTextKey"))
                     .font(.system(size: 14, weight: .regular))
                     .foregroundColor(Color.theme.text)
                     .multilineTextAlignment(.center)
@@ -37,7 +37,7 @@ struct OnboardingView: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .fill(Color.theme.evening)
-                        Text("Começar a usar Bell")
+                        Text(LocalizedStringKey("startKey"))
                             .font(.system(size: 14, weight: .semibold))
                             .foregroundColor(Color.theme.text)
                     }
@@ -67,7 +67,7 @@ extension OnboardingView {
                     .frame(width: 24, height: 24)
             }.popover(isPresented: self.$isPopover, arrowEdge: .bottom) {
                 VStack{
-                    Text("Fechar Bell")
+                    Text(LocalizedStringKey("closeKey"))
                         .font(.system(size: 12, weight: .regular))
                         .foregroundColor(Color.theme.text)
                 }

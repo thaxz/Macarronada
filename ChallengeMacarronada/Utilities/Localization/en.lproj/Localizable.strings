@@ -1,0 +1,57 @@
+// MARK: - Localization file
+// "key" + = + "value"
+// interpolation = "key + %@" + = + "value + %@"
+
+// MARK: Shifts
+
+"morningKey" = "Morning";
+"eveningKey" = "Afternoon";
+"nightKey" = "Night";
+
+// MARK: Onboarding
+
+"welcomeKey" = "Welcome to Bell!";
+"onboardingTextKey" = "Bell divides the day into shifts through a user-friendly interface and sends notifications throughout the day to streamline your organizational process.";
+"startKey" = "Start using Bell";
+"closeKey" = "Quit Bell";
+
+// MARK: Pop-ups
+
+"goodMorningKey" = "Good morning!";
+"remainingQuestionKey" = "Would you like to reschedule the tasks that were left from yesterday for today?";
+"yesKey" = "Yes";
+"noKey" = "No";
+
+"freeTimeTitleEveningKey" = "Awesome!";
+"freeTimeTitleNightKey" = "Nice!";
+"freeTimeEveningMessageKey" = "Enjoy your lunch, take a break, and see you soon!";
+"freeTimeNightMessageKey" = "Good evening, remember to rest, and see you tomorrow!";
+
+"activitiesKey" = "View Activities";
+
+// MARK: Home
+
+"emptyTextKey" = "Try writing a longer task.";
+"goToTodayKey" = "Go to today.";
+"selectDateKey" = "Enter date";
+"addNewActivityKey" = "Add a new task.";
+"createNewTaskKey" = "Click to create a new task";
+"helpNextShiftKey" = "Double click to assign task to next shift";
+"deleteActivityButtonKey" = "Delete task.";
+"moveShiftButtonKey" = "Move to the next shift.";
+
+"topLbMorningKey" = "8am";
+"bottomLbMorningKey" = "12pm";
+"topLbEveningKey" = "2pm";
+"bottomLbEveningKey" = "6pm";
+"topLbNightKey" = "6pm";
+"bottomLbNightKey" = "0am";
+
+// MARK: Notifications
+
+"morningNotificationTitleKey" = "Good morning!";
+"morningNotificationSubtitleKey" = "Shall we start the tasks?";
+"eveningNotificationTitleKey" = "Nice!";
+"eveningNotificationSubtitleKey" = "Lunchtime, enjoy your break, and see you soon :)";
+"nightNotificationTitleKey" = "Awesome!";
+"nightNotificationSubtitleKey" = "Good night, remember to rest, and see you tomorrow!";

@@ -10,21 +10,21 @@ import SwiftUI
 struct ShiftLine: View {
     
     let shift: Shifts?
-    let topLabel: String
-    let bottomLabel: String
+    let topLabel: LocalizedStringKey
+    let bottomLabel: LocalizedStringKey
     
     init(shift: Shifts ) {
         self.shift = shift
         switch shift {
         case .morning:
-            self.topLabel = "08h"
-            self.bottomLabel = "12h"
+            self.topLabel = LocalizedStringKey("topLbMorningKey")
+            self.bottomLabel = LocalizedStringKey("bottomLbMorningKey")
         case .evening:
-            self.topLabel = "14h"
-            self.bottomLabel = "18h"
+            self.topLabel = LocalizedStringKey("topLbEveningKey")
+            self.bottomLabel = LocalizedStringKey("bottomLbEveningKey")
         case .night:
-            self.topLabel = "18h"
-            self.bottomLabel = "00h"
+            self.topLabel = LocalizedStringKey("topLbNightKey")
+            self.bottomLabel = LocalizedStringKey("bottomLbNightKey")
         }
     }
     
