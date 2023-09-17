@@ -31,5 +31,14 @@
 
 // MARK: Home
 
+"emptyTextKey" = "Tente escrever uma atividade maior";
+"goToTodayKey" = "Ir para hoje";
+"selectDateKey" = "Enter date";
+"addNewActivityKey" = "Adicionar nova atividade";
+"createNewTaskKey" = "Click to create a new task";
+"helpNextShiftKey" = "Double click to assign task to next shift";
+"deleteActivityButtonKey" = "Excluir atividade";
+"moveShiftButtonKey" = "Mover para próximo turno";
+
 
 // MARK: Notifications
