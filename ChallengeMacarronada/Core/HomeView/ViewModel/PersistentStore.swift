@@ -47,6 +47,8 @@ final class PersistentStore : ObservableObject {
         }
     }
     
+    // MARK: CRUD
+    
     func createNewTask(withText text: String){
 
         let newAssignment = AssignmentEntity(context: container.viewContext)
@@ -101,13 +103,11 @@ final class PersistentStore : ObservableObject {
         case .night:
             break
         }
-
         newAssignment.id = UUID().uuidString
         newAssignment.text = task.text
         newAssignment.shift = newShift.rawValue
         newAssignment.isCompleted = task.isCompleted
         newAssignment.taskDate = task.taskDate
-
     }
     
     
@@ -135,9 +135,6 @@ final class PersistentStore : ObservableObject {
         request.predicate = NSPredicate(format: "taskDate == %@", Date.now.stripTime() as CVarArg)
         request.predicate = NSPredicate(format: "shift == %@", "Manhã")
         request.predicate = NSPredicate(format: "isCompleted == 0")
-        
-//        print(Date.now.stripTime())
-        
         do {
             let results = try container.viewContext.fetch(request)
             print(results.count)

@@ -33,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		8A0ECC842A278732005B5B80 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		8A0ECC862A2795EA005B5B80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8A0ECC862A2795EA005B5B80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AAAE2B22A29293E00EE8F91 /* ilustrações bell-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ilustrações bell-01.png"; sourceTree = "<group>"; };
 		8AAAE2B32A29293E00EE8F91 /* ilustrações bell-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ilustrações bell-02.png"; sourceTree = "<group>"; };
 		8AAAE2B42A29293E00EE8F91 /* ilustrações bell-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ilustrações bell-03.png"; sourceTree = "<group>"; };
@@ -73,6 +73,7 @@
 		8AAAE2B12A29290400EE8F91 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8A0ECC862A2795EA005B5B80 /* Info.plist */,
 				E9B066EC2A1D08F300BDDA48 /* Assets.xcassets */,
 				8AAAE2B22A29293E00EE8F91 /* ilustrações bell-01.png */,
 				8AAAE2B32A29293E00EE8F91 /* ilustrações bell-02.png */,
@@ -149,6 +150,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E97BA7D92AB7AF3B00E72F5A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E9B066F12A1D08F300BDDA48 /* ChallengeMacarronada.entitlements */,
+				8ACE96112A2643C70050C54D /* Macarronada.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		E9A59DA32A4503D500C85A35 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,16 +187,13 @@
 			isa = PBXGroup;
 			children = (
 				E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */,
-				E9A59DA32A4503D500C85A35 /* Components */,
 				8AAAE2B12A29290400EE8F91 /* Resources */,
-				8ACE96112A2643C70050C54D /* Macarronada.xcdatamodeld */,
+				E97BA7D92AB7AF3B00E72F5A /* CoreData */,
 				E9EF24DD2A28DB9700786E44 /* Managers */,
-				8A0ECC862A2795EA005B5B80 /* Info.plist */,
 				E9B066F82A1D094E00BDDA48 /* Model */,
 				E9B066F72A1D092600BDDA48 /* Core */,
 				E9B066FA2A1D096400BDDA48 /* Extentions */,
 				E9B066F92A1D095A00BDDA48 /* Utilities */,
-				E9B066F12A1D08F300BDDA48 /* ChallengeMacarronada.entitlements */,
 				E9B066EE2A1D08F300BDDA48 /* Preview Content */,
 			);
 			path = ChallengeMacarronada;
@@ -203,6 +210,7 @@
 		E9B066F72A1D092600BDDA48 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E9A59DA32A4503D500C85A35 /* Components */,
 				E979F9442A562D5E0066B52A /* Onboarding */,
 				E94E5D742A24CBEB00EB20ED /* PopUps */,
 				E94A33212A1F993300C39E2F /* HomeView */,
@@ -213,6 +221,7 @@
 		E9B066F82A1D094E00BDDA48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E94A331E2A1F949500C39E2F /* Enums */,
 				E94A331B2A1F93A600C39E2F /* Assignment.swift */,
 			);
 			path = Model;
@@ -222,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				E9319A992A20E51800DC635E /* ViewModifiers */,
-				E94A331E2A1F949500C39E2F /* Enums */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
