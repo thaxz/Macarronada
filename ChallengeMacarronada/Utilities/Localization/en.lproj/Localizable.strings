@@ -1,0 +1,5 @@
+// MARK: - Localization file
+// "key" + = + "value"
+// interpolation = "key + %@" + = + "value + %@"
+
+
