@@ -11,47 +11,47 @@
 // MARK: Onboarding
 
 "welcomeKey" = "Welcome to Bell!";
-"onboardingTextKey" = "Bell divide o dia em turnos através de uma interface prática e manda notificações ao longo do dia para simplificar o seu processo de organização.";
-"startKey" = "Começar a usar Bell";
+"onboardingTextKey" = "Bell divides the day into shifts through a user-friendly interface and sends notifications throughout the day to streamline your organizational process.";
+"startKey" = "Start using Bell";
 "closeKey" = "Quit Bell";
 
 // MARK: Pop-ups
 
 "goodMorningKey" = "Good morning!";
-"remainingQuestionKey" = "Você deseja remanejar as atividades que sobraram ontem para hoje?"
+"remainingQuestionKey" = "Would you like to reschedule the tasks that were left from yesterday for today?"
 "yesKey" = "Yes";
 "noKey" = "No";
 
 "freeTimeTitleEveningKey" = "Awesome!";
 "freeTimeTitleNightKey" = "Nice!";
-"freeTimeEveningMessageKey" = "Bom almoço, aproveite o descanso e até já :)";
-"freeTimeNightMessageKey" = "Boa noite, lembre-se de descansar e até amanhã!";
+"freeTimeEveningMessageKey" = "Enjoy your lunch, take a break, and see you soon!";
+"freeTimeNightMessageKey" = "Good evening, remember to rest, and see you tomorrow!";
 
-"activitiesKey" = "Ver Atividades";
+"activitiesKey" = "View Activities";
 
 // MARK: Home
 
-"emptyTextKey" = "Tente escrever uma atividade maior";
-"goToTodayKey" = "Ir para hoje";
+"emptyTextKey" = "Try writing a longer task.";
+"goToTodayKey" = "Go to today.";
 "selectDateKey" = "Enter date";
-"addNewActivityKey" = "Adicionar nova atividade";
+"addNewActivityKey" = "Add a new task.";
 "createNewTaskKey" = "Click to create a new task";
 "helpNextShiftKey" = "Double click to assign task to next shift";
-"deleteActivityButtonKey" = "Excluir atividade";
-"moveShiftButtonKey" = "Mover para próximo turno";
+"deleteActivityButtonKey" = "Delete task.";
+"moveShiftButtonKey" = "Move to the next shift.";
 
-"topLbMorningKey" = "08h";
-"bottomLbMorningKey" = "12h";
-"topLbEveningKey" = "14h";
-"bottomLbEveningKey" = "18h";
-"topLbNightKey" = "18h";
-"bottomLbNightKey" = "00h";
+"topLbMorningKey" = "8am";
+"bottomLbMorningKey" = "12pm";
+"topLbEveningKey" = "2pm";
+"bottomLbEveningKey" = "6pm";
+"topLbNightKey" = "6pm";
+"bottomLbNightKey" = "0am";
 
 // MARK: Notifications
 
-"morningNotificationTitleKey" = "Bom dia!";
-"morningNotificationSubtitleKey" = "Vamos começar as atividades?";
-"eveningNotificationTitleKey" = "Show!";
-"eveningNotificationSubtitleKey" = "Bom almoço, aproveite o descanso e até já :)";
-"nightNotificationTitleKey" = "Ótimo!";
-"nightNotificationSubtitleKey" = "Boa noite, lembre-se de descansar e até amanhã!";
+"morningNotificationTitleKey" = "Good morning!";
+"morningNotificationSubtitleKey" = "Shall we start the tasks?";
+"eveningNotificationTitleKey" = "Nice!";
+"eveningNotificationSubtitleKey" = "Lunchtime, enjoy your break, and see you soon :)";
+"nightNotificationTitleKey" = "Awesome!";
+"nightNotificationSubtitleKey" = "Good night, remember to rest, and see you tomorrow!";
