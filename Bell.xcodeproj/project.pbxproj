@@ -13,7 +13,6 @@
 		8AAAE2B72A29293E00EE8F91 /* ilustrações bell-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AAAE2B42A29293E00EE8F91 /* ilustrações bell-03.png */; };
 		8ACE96132A2643C70050C54D /* Macarronada.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8ACE96112A2643C70050C54D /* Macarronada.xcdatamodeld */; };
 		8ACE96152A2644610050C54D /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACE96142A2644610050C54D /* PersistentStore.swift */; };
-		8AF8A9222A20F1B40024C505 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF8A9212A20F1B40024C505 /* CustomSegmentedControl.swift */; };
 		E9319A9D2A20E7DD00DC635E /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9319A9C2A20E7DD00DC635E /* Placeholder.swift */; };
 		E9319A9F2A20EAA200DC635E /* ShiftLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9319A9E2A20EAA200DC635E /* ShiftLine.swift */; };
 		E9319AA12A20ED9300DC635E /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9319AA02A20ED9300DC635E /* ListRow.swift */; };
@@ -25,6 +24,7 @@
 		E94E5D762A24CC6100EB20ED /* RemainingTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E5D752A24CC6100EB20ED /* RemainingTasks.swift */; };
 		E94E5D782A24D0C100EB20ED /* FreeTimeModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94E5D772A24D0C100EB20ED /* FreeTimeModal.swift */; };
 		E979F9472A562D740066B52A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E979F9462A562D740066B52A /* OnboardingView.swift */; };
+		E97BA7D82AB7AE5900E72F5A /* CustomSegmentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97BA7D72AB7AE5900E72F5A /* CustomSegmentedController.swift */; };
 		E9B066E92A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */; };
 		E9B066ED2A1D08F300BDDA48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B066EC2A1D08F300BDDA48 /* Assets.xcassets */; };
 		E9B066F02A1D08F300BDDA48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B066EF2A1D08F300BDDA48 /* Preview Assets.xcassets */; };
@@ -39,7 +39,6 @@
 		8AAAE2B42A29293E00EE8F91 /* ilustrações bell-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ilustrações bell-03.png"; sourceTree = "<group>"; };
 		8ACE96122A2643C70050C54D /* Macarronada.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Macarronada.xcdatamodel; sourceTree = "<group>"; };
 		8ACE96142A2644610050C54D /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
-		8AF8A9212A20F1B40024C505 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomSegmentedControl.swift; path = Components/CustomSegmentedControl.swift; sourceTree = SOURCE_ROOT; };
 		E9319A9C2A20E7DD00DC635E /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
 		E9319A9E2A20EAA200DC635E /* ShiftLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftLine.swift; sourceTree = "<group>"; };
 		E9319AA02A20ED9300DC635E /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		E94E5D752A24CC6100EB20ED /* RemainingTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainingTasks.swift; sourceTree = "<group>"; };
 		E94E5D772A24D0C100EB20ED /* FreeTimeModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeModal.swift; sourceTree = "<group>"; };
 		E979F9462A562D740066B52A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		E97BA7D72AB7AE5900E72F5A /* CustomSegmentedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedController.swift; sourceTree = "<group>"; };
 		E9B066E52A1D08F200BDDA48 /* Bell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeMacarronadaApp.swift; sourceTree = "<group>"; };
 		E9B066EC2A1D08F300BDDA48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +73,7 @@
 		8AAAE2B12A29290400EE8F91 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E9B066EC2A1D08F300BDDA48 /* Assets.xcassets */,
 				8AAAE2B22A29293E00EE8F91 /* ilustrações bell-01.png */,
 				8AAAE2B32A29293E00EE8F91 /* ilustrações bell-02.png */,
 				8AAAE2B42A29293E00EE8F91 /* ilustrações bell-03.png */,
@@ -151,7 +152,7 @@
 		E9A59DA32A4503D500C85A35 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				8AF8A9212A20F1B40024C505 /* CustomSegmentedControl.swift */,
+				E97BA7D72AB7AE5900E72F5A /* CustomSegmentedController.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -185,7 +186,6 @@
 				E9B066F72A1D092600BDDA48 /* Core */,
 				E9B066FA2A1D096400BDDA48 /* Extentions */,
 				E9B066F92A1D095A00BDDA48 /* Utilities */,
-				E9B066EC2A1D08F300BDDA48 /* Assets.xcassets */,
 				E9B066F12A1D08F300BDDA48 /* ChallengeMacarronada.entitlements */,
 				E9B066EE2A1D08F300BDDA48 /* Preview Content */,
 			);
@@ -319,7 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E94E5D782A24D0C100EB20ED /* FreeTimeModal.swift in Sources */,
-				8AF8A9222A20F1B40024C505 /* CustomSegmentedControl.swift in Sources */,
 				E9319A9F2A20EAA200DC635E /* ShiftLine.swift in Sources */,
 				8A0ECC852A278732005B5B80 /* Date.swift in Sources */,
 				E94A331C2A1F93A600C39E2F /* Assignment.swift in Sources */,
@@ -335,6 +334,7 @@
 				E9319AA32A20F0B700DC635E /* PreviewProvider.swift in Sources */,
 				E979F9472A562D740066B52A /* OnboardingView.swift in Sources */,
 				8ACE96132A2643C70050C54D /* Macarronada.xcdatamodeld in Sources */,
+				E97BA7D82AB7AE5900E72F5A /* CustomSegmentedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
