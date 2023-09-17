@@ -159,9 +159,6 @@
 		E9B066DC2A1D08F200BDDA48 = {
 			isa = PBXGroup;
 			children = (
-				E9A59DA32A4503D500C85A35 /* Components */,
-				8AAAE2B12A29290400EE8F91 /* Resources */,
-				8ACE96112A2643C70050C54D /* Macarronada.xcdatamodeld */,
 				E9B066E72A1D08F200BDDA48 /* ChallengeMacarronada */,
 				E9B066E62A1D08F200BDDA48 /* Products */,
 			);
@@ -178,9 +175,12 @@
 		E9B066E72A1D08F200BDDA48 /* ChallengeMacarronada */ = {
 			isa = PBXGroup;
 			children = (
+				E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */,
+				E9A59DA32A4503D500C85A35 /* Components */,
+				8AAAE2B12A29290400EE8F91 /* Resources */,
+				8ACE96112A2643C70050C54D /* Macarronada.xcdatamodeld */,
 				E9EF24DD2A28DB9700786E44 /* Managers */,
 				8A0ECC862A2795EA005B5B80 /* Info.plist */,
-				E9B066E82A1D08F200BDDA48 /* ChallengeMacarronadaApp.swift */,
 				E9B066F82A1D094E00BDDA48 /* Model */,
 				E9B066F72A1D092600BDDA48 /* Core */,
 				E9B066FA2A1D096400BDDA48 /* Extentions */,

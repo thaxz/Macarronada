@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ShiftLine: View {
-    let shift: Shifts
+    
+    let shift: Shifts?
     let topLabel: String
     let bottomLabel: String
     
-    init(shift: Shifts) {
+    init(shift: Shifts ) {
         self.shift = shift
         switch shift {
         case .morning:

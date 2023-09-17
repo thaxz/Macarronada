@@ -48,6 +48,9 @@ struct ListRow: View {
                     .resizable()
                     .frame(width: 12, height: 12)
                     .foregroundColor(Color.theme.text)
+                
+                
+                
             }
             .padding(.horizontal, 12)
         }

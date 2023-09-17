@@ -9,6 +9,7 @@ import SwiftUI
 import UserNotifications
 
 struct HomeView: View {
+  //  @State var teste: FocusState.Binding =
     @State var isPopover: Bool = false
     @State var text = ""
     @State var checkEmptytext: Bool = false
@@ -111,7 +112,9 @@ extension HomeView {
                         .datePickerStyle(.graphical)
                         .labelsHidden()
                         .fixedSize()
-                        .padding()
+                        .tint(.pink)
+                        .border(.clear)
+                        //.padding()
                     }
                 Spacer()
                 
