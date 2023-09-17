@@ -2,4 +2,34 @@
 // "key" + = + "value"
 // interpolation = "key + %@" + = + "value + %@"
 
+// MARK: Shifts
 
+"morningKey" = "Morning";
+"eveningKey" = "Afternoon";
+"nightKey" = "Night";
+
+// MARK: Onboarding
+
+"welcomeKey" = "Welcome to Bell!";
+"onboardingTextKey" = "Bell divide o dia em turnos através de uma interface prática e manda notificações ao longo do dia para simplificar o seu processo de organização.";
+"startKey" = "Começar a usar Bell";
+"closeKey" = "Fechar Bell";
+
+// MARK: Pop-ups
+
+"goodMorningKey" = "Good morning!";
+"remainingQuestionKey" = "Você deseja remanejar as atividades que sobraram ontem para hoje?"
+"yesKey" = "Yes";
+"noKey" = "No";
+
+"freeTimeTitleEveningKey" = "Awesome!";
+"freeTimeTitleNightKey" = "Nice!";
+"freeTimeEveningMessageKey" = "Bom almoço, aproveite o descanso e até já :)";
+"freeTimeNightMessageKey" = "Boa noite, lembre-se de descansar e até amanhã!";
+
+"activitiesKey" = "Ver Atividades";
+
+// MARK: Home
+
+
+// MARK: Notifications
